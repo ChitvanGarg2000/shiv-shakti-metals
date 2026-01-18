@@ -64,9 +64,13 @@ export function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What We Recycle</h2>
+          <div className="text-sm text-muted-foreground">
+            CPCB & UPPCB Approved | ISO Certified | EPR Compliance Experts
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">India’s Trusted Authorized Recycling Partner</h2>
           <p className="text-xl text-primary font-semibold mb-2">
-            Creating a Sustainable Future with Shiv Shakti Metals
+          SSM’s mission is to deliver authorized, transparent, and environmentally responsible
+          recycling solutions
           </p>
         </motion.div>
 

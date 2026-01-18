@@ -12,9 +12,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2 font-bold text-xl">
+        <Link href="/" className="flex items-center font-bold text-xl">
           <Image src="/logo.png" alt="SSK Metals Logo" width={60} height={60} />
-          <h2>Shiv Shakti Metals</h2>
+          <div className="brand-name flex flex-col items-start">
+          <Image src="/ssm.png" alt="SSK Metals Logo text"  width={48} height={48} />
+          <span className="text-xs font-normal">Metals</span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
