@@ -3,51 +3,55 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Recycle } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import Image from "next/image"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [enterprisesOpen, setEnterprisesOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center font-bold text-xl">
-          <Image src="/logo.png" alt="SSK Metals Logo" width={60} height={60} />
-          <div className="brand-name flex flex-col items-start">
-          <Image src="/ssm.png" alt="SSK Metals Logo text"  width={48} height={48} />
-          <span className="text-xs font-normal">Metals</span>
-          </div>
+      <nav className="container mx-auto flex h-20 items-center justify-between px-4">
+        {/* Logo */}
+        <Link href="/" className="flex font-bold text-center items-center">
+          <Image src="/logo.png" alt="site-logo" width={56} height={56} className="me-2"/>
+          <Image src="/logo-text.png" alt="site-logo" width={48} height={48} />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-8">
+          {/* Enterprises Dropdown */}
+          <div className="relative group">
+            <button className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+              Enterprises
+              <ChevronDown className="h-4 w-4" aria-hidden="true" />
+            </button>
+            <div className="absolute left-0 mt-0 w-48 bg-card border border-border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <Link
+                href="/enterprises/services"
+                className="block px-4 py-2 text-sm text-card-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+              >
+                Our Services
+              </Link>
+              <Link
+                href="/enterprises/sectors"
+                className="block px-4 py-2 text-sm text-card-foreground hover:bg-primary/10 hover:text-primary transition-colors border-t border-border"
+              >
+                Our Sectors
+              </Link>
+            </div>
+          </div>
+
           <Link
-            href="/about"
+            href="/consumer"
             className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           >
-            About
+            Consumer
           </Link>
-          <Link
-            href="/services"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Services
-          </Link>
-          <Link href="/epr" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-            EPR
-          </Link>
-          <Link
-            href="/#enquiry"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Get Quote
-          </Link>
-          <Link href="/#faq" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-            FAQ
-          </Link>
-          <Button asChild size="sm">
-            <Link href="/#enquiry">Contact Us</Link>
+
+          <Button asChild>
+            <Link href="/#enquiry">Make a Change</Link>
           </Button>
         </div>
 
@@ -65,45 +69,45 @@ export function Header() {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border bg-card">
-          <div className="container mx-auto flex flex-col gap-4 p-4">
+          <div className="container mx-auto flex flex-col gap-2 p-4">
+            {/* Enterprises Mobile Dropdown */}
+            <button
+              onClick={() => setEnterprisesOpen(!enterprisesOpen)}
+              className="text-sm font-medium text-card-foreground hover:text-primary transition-colors text-left flex items-center justify-between py-2"
+            >
+              Enterprises
+              <ChevronDown className={`h-4 w-4 transition-transform ${enterprisesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+            </button>
+            {enterprisesOpen && (
+              <div className="pl-4 flex flex-col gap-2">
+                <Link
+                  href="/enterprises/services"
+                  className="text-sm text-card-foreground hover:text-primary transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Our Services
+                </Link>
+                <Link
+                  href="/enterprises/sectors"
+                  className="text-sm text-card-foreground hover:text-primary transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Our Sectors
+                </Link>
+              </div>
+            )}
+
             <Link
-              href="/about"
-              className="text-sm font-medium text-card-foreground hover:text-primary transition-colors"
+              href="/consumer"
+              className="text-sm font-medium text-card-foreground hover:text-primary transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About
+              Consumer
             </Link>
-            <Link
-              href="/services"
-              className="text-sm font-medium text-card-foreground hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              href="/epr"
-              className="text-sm font-medium text-card-foreground hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              EPR
-            </Link>
-            <Link
-              href="/#enquiry"
-              className="text-sm font-medium text-card-foreground hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Get Quote
-            </Link>
-            <Link
-              href="/#faq"
-              className="text-sm font-medium text-card-foreground hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              FAQ
-            </Link>
-            <Button asChild className="w-full">
+
+            <Button asChild className="w-full mt-2">
               <Link href="/#enquiry" onClick={() => setMobileMenuOpen(false)}>
-                Contact Us
+                Make a Change
               </Link>
             </Button>
           </div>

@@ -142,7 +142,7 @@ export function HeroSlider() {
             </div>
           </h2>
 
-          <p className="mt-3 text-base md:text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="mt-3 text-base md:text-lg text-white/80 max-w-2xl mx-auto sm:mx-0">
             Every second counts—reduce, reuse, recycle and build a cleaner future.
           </p>
         </div>
