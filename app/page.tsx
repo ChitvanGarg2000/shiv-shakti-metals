@@ -5,6 +5,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import {Services} from "@/components/Services"
 import { CertificationsSection } from "@/components/certifications-section"
+import { ClientsCarousel } from "@/components/clients-section"
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <main className="flex-1">
         <HeroSlider />
         <Services />
+        <ClientsCarousel />
         <CertificationsSection />
         <EnquiryForm />
         <FAQSection />

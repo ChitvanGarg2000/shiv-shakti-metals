@@ -2,35 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Battery, Cable, Cpu, Recycle, Trash2 } from "lucide-react"
-
-const recyclingCategories = [
-  {
-    icon: Cpu,
-    title: "E-Waste",
-    description: "Computers, laptops, servers, printers, IT & electronic scrap, etc.",
-  },
-  {
-    icon: Battery,
-    title: "Battery Waste",
-    description: "Lead Acid Batteries, UPS batteries, automotive & industrial batteries, etc.",
-  },
-  {
-    icon: Recycle,
-    title: "Non-Ferrous Metals",
-    description: "Copper, aluminium, brass and other valuable non-ferrous metals",
-  },
-  {
-    icon: Cable,
-    title: "Insulated Wires & Cables",
-    description: "Copper and aluminium cables with insulation",
-  },
-  {
-    icon: Trash2,
-    title: "Plastic Scrap",
-    description: "Recovered plastic waste from dismantling and segregation processes",
-  },
-]
+import { ServicesShowcase } from "./services-showcase"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -121,27 +93,7 @@ export function Services() {
           viewport={{ once: true }}
           className="mt-12"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">End-to-End Recycling Solutions</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {recyclingCategories.map((category, index) => {
-              const Icon = category.icon
-              return (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-border"
-                >
-                  <div className="flex flex-col items-center text-center">
-                    <div className="mb-4 p-3 bg-primary/10 rounded-full">
-                      <Icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <h4 className="font-semibold text-lg mb-2">{category.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{category.description}</p>
-                  </div>
-                </motion.div>
-              )
-            })}
-          </div>
+          <ServicesShowcase />
         </motion.div>
       </div>
     </section>

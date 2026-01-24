@@ -7,7 +7,9 @@ import { motion } from "framer-motion"
 import { Button } from "./ui/button"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import UNCountdown from "./app/CountDown"
+import dynamic from "next/dynamic"
+
+const Countdown = dynamic(() => import("./app/CountDown"), { ssr: false })
 
 const slides = [
   {
@@ -146,7 +148,7 @@ export function HeroSlider() {
             Every second counts—reduce, reuse, recycle and build a cleaner future.
           </p>
         </div>
-        <UNCountdown />
+        <Countdown />
       </div>
     </section>
   )
