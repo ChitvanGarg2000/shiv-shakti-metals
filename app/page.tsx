@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer"
 import {Services} from "@/components/Services"
 import { CertificationsSection } from "@/components/certifications-section"
 import { ClientsCarousel } from "@/components/clients-section"
+import { TestimonialsSection } from "../components/testimonial-section"
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
         <Services />
         <ClientsCarousel />
         <CertificationsSection />
+        <TestimonialsSection />
         <EnquiryForm />
         <FAQSection />
       </main>

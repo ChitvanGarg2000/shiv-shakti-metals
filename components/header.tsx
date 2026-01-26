@@ -1,118 +1,139 @@
+
+
 "use client"
 
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, ChevronDown } from "lucide-react"
+import { SidebarNav } from "./sidebar-nav"
 import Image from "next/image"
 
 export function Header() {
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [enterprisesOpen, setEnterprisesOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="container mx-auto flex h-20 items-center justify-between px-4">
-        {/* Logo */}
-        <Link href="/" className="flex font-bold text-center items-center">
-          <Image src="/logo.png" alt="site-logo" width={56} height={56} className="me-2"/>
-          <Image src="/logo-text.png" alt="site-logo" width={48} height={48} />
-        </Link>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          {/* Enterprises Dropdown */}
-          <div className="relative group">
-            <button className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
-              Enterprises
-              <ChevronDown className="h-4 w-4" aria-hidden="true" />
-            </button>
-            <div className="absolute left-0 mt-0 w-48 bg-card border border-border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <Link
-                href="/enterprises/services"
-                className="block px-4 py-2 text-sm text-card-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-              >
-                Our Services
-              </Link>
-              <Link
-                href="/enterprises/sectors"
-                className="block px-4 py-2 text-sm text-card-foreground hover:bg-primary/10 hover:text-primary transition-colors border-t border-border"
-              >
-                Our Sectors
-              </Link>
-            </div>
-          </div>
-
-          <Link
-            href="/consumer"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Consumer
+    <>
+      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <nav className="container mx-auto flex h-20 items-center px-4 justify-between md:justify-start">
+          {/* Logo */}
+          <Link href="/" className="flex font-bold text-center items-center">
+            <Image src="/logo.png" alt="site-logo" width={56} height={56} className="me-2" />
+            <Image src="/logo-text.png" alt="site-logo" width={48} height={48} />
           </Link>
 
-          <Button asChild>
-            <Link href="/#enquiry">Make a Change</Link>
-          </Button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 text-foreground"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileMenuOpen}
-        >
-          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
-      </nav>
-
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="md:hidden border-t border-border bg-card">
-          <div className="container mx-auto flex flex-col gap-2 p-4">
-            {/* Enterprises Mobile Dropdown */}
-            <button
-              onClick={() => setEnterprisesOpen(!enterprisesOpen)}
-              className="text-sm font-medium text-card-foreground hover:text-primary transition-colors text-left flex items-center justify-between py-2"
-            >
-              Enterprises
-              <ChevronDown className={`h-4 w-4 transition-transform ${enterprisesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
-            </button>
-            {enterprisesOpen && (
-              <div className="pl-4 flex flex-col gap-2">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8 flex-1 md:justify-end">
+            {/* Enterprises Dropdown */}
+            <div className="relative group">
+              <button className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+                Enterprises
+                <ChevronDown className="h-4 w-4" aria-hidden="true" />
+              </button>
+              <div className="absolute left-0 mt-0 w-48 bg-card border border-border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <Link
                   href="/enterprises/services"
-                  className="text-sm text-card-foreground hover:text-primary transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-2 text-sm text-card-foreground hover:bg-primary/10 hover:text-primary transition-colors"
                 >
                   Our Services
                 </Link>
                 <Link
                   href="/enterprises/sectors"
-                  className="text-sm text-card-foreground hover:text-primary transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-2 text-sm text-card-foreground hover:bg-primary/10 hover:text-primary transition-colors border-t border-border"
                 >
                   Our Sectors
                 </Link>
               </div>
-            )}
+            </div>
 
             <Link
               href="/consumer"
-              className="text-sm font-medium text-card-foreground hover:text-primary transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               Consumer
             </Link>
 
-            <Button asChild className="w-full mt-2">
-              <Link href="/#enquiry" onClick={() => setMobileMenuOpen(false)}>
-                Make a Change
-              </Link>
+            <Button asChild>
+              <Link href="/#enquiry">Make a Change</Link>
             </Button>
           </div>
-        </div>
-      )}
-    </header>
+
+          {/* Right Side Buttons */}
+          <div className="flex items-center gap-2">
+            {/* Sidebar Toggle Button (visible on all screens) */}
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="p-2 text-foreground hover:text-primary transition-colors ms-3 cursor-pointer hidden md:inline-flex"
+              aria-label="Open sidebar navigation"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? <Menu className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </nav>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-border bg-card">
+            <div className="container mx-auto flex flex-col gap-2 p-4">
+              {/* Enterprises Mobile Dropdown */}
+              <button
+                onClick={() => setEnterprisesOpen(!enterprisesOpen)}
+                className="text-sm font-medium text-card-foreground hover:text-primary transition-colors text-left flex items-center justify-between py-2"
+              >
+                Enterprises
+                <ChevronDown className={`h-4 w-4 transition-transform ${enterprisesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+              </button>
+              {enterprisesOpen && (
+                <div className="pl-4 flex flex-col gap-2">
+                  <Link
+                    href="/enterprises/services"
+                    className="text-sm text-card-foreground hover:text-primary transition-colors py-2"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Our Services
+                  </Link>
+                  <Link
+                    href="/enterprises/sectors"
+                    className="text-sm text-card-foreground hover:text-primary transition-colors py-2"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Our Sectors
+                  </Link>
+                </div>
+              )}
+
+              <Link
+                href="/consumer"
+                className="text-sm font-medium text-card-foreground hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Consumer
+              </Link>
+
+              <Button asChild className="w-full mt-2">
+                <Link href="/#enquiry" onClick={() => setMobileMenuOpen(false)}>
+                  Make a Change
+                </Link>
+              </Button>
+            </div>
+          </div>
+        )}
+      </header>
+
+      {/* Sidebar Navigation */}
+      <SidebarNav isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+    </>
   )
 }
