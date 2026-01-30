@@ -13,6 +13,8 @@ import {
   Truck,
   FileCheck,
   Calendar,
+  BatteryWarning,
+  WashingMachine
 } from 'lucide-react'
 
 interface Service {
@@ -54,9 +56,21 @@ const services: Service[] = [
     color: 'bg-primary',
   },
   {
+    id: 'ewaste-disposal',
+    title: 'E-waste & Battery Waste Manifest',
+    icon: <BatteryWarning className="h-8 w-8" />,
+    color: 'bg-primary',
+  },
+  {
     id: 'manifest-disposal',
-    title: 'E-waste & Battery Waste Manifest and Disposal Certificate',
+    title: 'Disposal Certificate',
     icon: <FileCheck className="h-8 w-8" />,
+    color: 'bg-primary',
+  },
+  {
+    id: 'machine-disposal',
+    title: 'USG Machine Disposal',
+    icon: <WashingMachine className="h-8 w-8" />,
     color: 'bg-primary',
   },
   {
@@ -154,18 +168,9 @@ export function ServicesShowcase() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-primary/5 rounded-lg p-8 border border-primary/20">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Explore All Services
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-xl mx-auto text-balance">
-              Get detailed information about each of our waste management and
-              recycling services
-            </p>
             <Button asChild size="lg">
               <Link href="/enterprises/services">View All Services</Link>
             </Button>
-          </div>
         </motion.div>
       </div>
     </section>
