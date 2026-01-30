@@ -4,7 +4,7 @@ import nodemailer from "nodemailer"
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { name, email, phone, metalType, message } = body
+     const { name, email, phone, role, service, sector, metalType, message } = body
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -46,6 +46,18 @@ export async function POST(request: Request) {
               <div class="field">
                 <div class="label">Phone:</div>
                 <div class="value">${phone || "Not provided"}</div>
+              </div>
+              <div class="field">
+                <div class="label">Role:</div>
+                <div class="value">${role || "Not specified"}</div>
+              </div>
+              <div class="field">
+                <div class="label">Services Interested In:</div>
+                <div class="value">${service || "Not specified"}</div>
+              </div>
+              <div class="field">
+                <div class="label">Sector:</div>
+                <div class="value">${sector || "Not specified"}</div>
               </div>
               <div class="field">
                 <div class="label">Type of Metal:</div>

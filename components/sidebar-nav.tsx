@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Home, Info, Phone, X } from 'lucide-react'
+import { Home, Info, Phone, X, TableOfContents } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -29,6 +29,11 @@ export function SidebarNav({ isOpen, onClose }: SidebarNavProps) {
       label: 'Contact Now',
       href: '/#enquiry',
       icon: Phone,
+    },
+    {
+      label: 'FAQs',
+      href: '/faq',
+      icon: TableOfContents,
     },
   ]
 

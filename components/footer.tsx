@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-card">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Image src="/logo.png" alt="Shiv Shakti Metals Logo" width={40} height={40} className="rounded-full" />
@@ -21,27 +21,59 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="#services" className="hover:text-primary transition-colors">
-                  Industrial Recycling
+                <Link href="/services" className="hover:text-primary transition-colors">
+                  Authorized Waste Recycling
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-primary transition-colors">
-                  Scrap Pickup
+                <Link href="/services" className="hover:text-primary transition-colors">
+                  Medical Machine Disposal
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-primary transition-colors">
-                  Metal Processing
+                <Link href="/services" className="hover:text-primary transition-colors">
+                  Secure Data Destruction
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-primary transition-colors">
-                  Consulting
+                <Link href="/services" className="hover:text-primary transition-colors">
+                  EPR Compliance & Documentation
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-primary transition-colors">
+                  Corporate & Bulk Waste Pickup
                 </Link>
               </li>
             </ul>
           </div>
+
+          <div>
+            <h3 className="font-semibold mb-4">More Services</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link href="/services" className="hover:text-primary transition-colors">
+                  E-waste & Battery Waste Manifest
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-primary transition-colors">
+                  Disposal Certificate
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-primary transition-colors">
+                  USG Machine Disposal
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-primary transition-colors">
+                  Annual Return Filing
+                </Link>
+              </li>
+            </ul>
+          </div>
+
 
           <div>
             <h3 className="font-semibold mb-4">Company</h3>

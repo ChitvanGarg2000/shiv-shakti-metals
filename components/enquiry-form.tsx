@@ -8,6 +8,13 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
 import { Mail, Phone, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
@@ -25,6 +32,9 @@ export function EnquiryForm() {
       name: formData.get("name"),
       email: formData.get("email"),
       phone: formData.get("phone"),
+      role: formData.get("role"),
+      service: formData.get("service"),
+      sector: formData.get("sector"),
       metalType: formData.get("metalType"),
       message: formData.get("message"),
     }
@@ -46,6 +56,8 @@ export function EnquiryForm() {
         title: "Enquiry Submitted Successfully",
         description: "We'll get back to you within 24 hours.",
       })
+
+      e.currentTarget.reset()
     } catch (error) {
       console.error("[v0] Form submission error:", error)
       toast({
@@ -103,7 +115,7 @@ export function EnquiryForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <p className="text-muted-foreground">(555) 123-4567</p>
+                  <p className="text-muted-foreground">+919068951095</p>
                 </div>
               </motion.div>
 
@@ -113,7 +125,7 @@ export function EnquiryForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">info@metalcycle.com</p>
+                  <p className="text-muted-foreground">shivshaktimetals2009@gmail.com</p>
                 </div>
               </motion.div>
 
@@ -123,7 +135,7 @@ export function EnquiryForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Location</h3>
-                  <p className="text-muted-foreground">123 Industrial Pkwy, Metaltown, MT 12345</p>
+                  <p className="text-muted-foreground">Khasra no 545, Sikheda road, industrial area Vill, Modinagar, Uttar Pradesh 201204</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -135,7 +147,7 @@ export function EnquiryForm() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="border-border/50">
+            <Card className="border-border/50 py-6">
               <CardHeader>
                 <CardTitle>Request a Quote</CardTitle>
                 <CardDescription>
@@ -164,6 +176,53 @@ export function EnquiryForm() {
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number</Label>
                     <Input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="role">Role *</Label>
+                    <Select name="role" required>
+                      <SelectTrigger id="role" aria-required="true" className="w-full">
+                        <SelectValue placeholder="Select your role" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="enterprise">Enterprise Representatives</SelectItem>
+                        <SelectItem value="government">Government Representatives</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="service">Services Interested In *</Label>
+                    <Select name="service" required>
+                      <SelectTrigger id="service" aria-required="true" className="w-full">
+                        <SelectValue placeholder="Select a service" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="Authorized Waste Recycling">Authorized Waste Recycling</SelectItem>
+                        <SelectItem value="Medical Machine Disposal">Medical Machine Disposal</SelectItem>
+                        <SelectItem value="Secure Data Destruction">Secure Data Destruction</SelectItem>
+                        <SelectItem value="EPR Compliance & Documentation">EPR Compliance & Documentation</SelectItem>
+                        <SelectItem value="Corporate & Bulk Waste Pickup">Corporate & Bulk Waste Pickup</SelectItem>
+                        <SelectItem value="E-waste & Battery Waste Manifest">E-waste & Battery Waste Manifest</SelectItem>
+                        <SelectItem value="Disposal Certificate">Disposal Certificate</SelectItem>
+                        <SelectItem value="USG Machine Disposal">USG Machine Disposal</SelectItem>
+                        <SelectItem value="Annual Return Filing">Annual Return Filing</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="sector">Sector *</Label>
+                    <Select name="sector" required>
+                      <SelectTrigger id="sector" aria-required="true" className="w-full">
+                        <SelectValue placeholder="Select a sector" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="ewaste">E-waste</SelectItem>
+                        <SelectItem value="plastic">Plastic waste</SelectItem>
+                        <SelectItem value="batteries">Batteries waste</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
 
                   <div className="space-y-2">

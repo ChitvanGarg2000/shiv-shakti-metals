@@ -8,7 +8,7 @@ type CountdownItem = {
 }
 
 export default function UNCountdown() {
-  const targetDate = new Date("2029-12-31T23:59:59").getTime()
+  const targetDate = new Date("2030-01-01T00:00:00").getTime()
 
   const renderer = ({
     days,

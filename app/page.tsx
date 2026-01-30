@@ -1,9 +1,9 @@
 import { HeroSlider } from "@/components/hero-slider"
 import { EnquiryForm } from "@/components/enquiry-form"
-import { FAQSection } from "@/components/faq-section"
 import { Header } from "@/components/header"
+import { ServicesShowcase } from "@/components/services-showcase"
 import { Footer } from "@/components/footer"
-import {Services} from "@/components/Services"
+import {WasteCategoriesSection} from "@/components/Services"
 import { CertificationsSection } from "@/components/certifications-section"
 import { ClientsCarousel } from "@/components/clients-section"
 import { TestimonialsSection } from "../components/testimonial-section"
@@ -14,12 +14,13 @@ export default function HomePage() {
       <Header />
       <main className="flex-1">
         <HeroSlider />
-        <Services />
+        <WasteCategoriesSection />
+        <ServicesShowcase />
         <ClientsCarousel />
         <CertificationsSection />
         <TestimonialsSection />
         <EnquiryForm />
-        <FAQSection />
+        {/* <FAQSection /> */}
       </main>
       <Footer />
     </div>
