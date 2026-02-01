@@ -22,7 +22,7 @@ export function SidebarNav({ isOpen, onClose }: SidebarNavProps) {
     },
     {
       label: 'About Us',
-      href: '/about',
+      href: '/about-us',
       icon: Info,
     },
     {

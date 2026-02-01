@@ -11,7 +11,6 @@ import { TestimonialsSection } from "../components/testimonial-section"
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
       <main className="flex-1">
         <HeroSlider />
         <WasteCategoriesSection />
@@ -20,9 +19,7 @@ export default function HomePage() {
         <CertificationsSection />
         <TestimonialsSection />
         <EnquiryForm />
-        {/* <FAQSection /> */}
       </main>
-      <Footer />
     </div>
   )
 }

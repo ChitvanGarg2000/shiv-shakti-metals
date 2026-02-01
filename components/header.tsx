@@ -49,10 +49,24 @@ export function Header() {
             </div>
 
             <Link
+              href="/about-us"
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              About Us
+            </Link>
+
+            <Link
               href="/consumer"
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               Consumer
+            </Link>
+
+            <Link
+              href="/faqs"
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              FAQs
             </Link>
 
             <Button asChild>
@@ -115,11 +129,26 @@ export function Header() {
               )}
 
               <Link
+                href="/about-us"
+                className="text-sm font-medium text-card-foreground hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About Us
+              </Link>
+              <Link
                 href="/consumer"
                 className="text-sm font-medium text-card-foreground hover:text-primary transition-colors py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Consumer
+              </Link>
+
+              <Link
+                href="/faqs"
+                className="text-sm font-medium text-card-foreground hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                FAQs
               </Link>
 
               <Button asChild className="w-full mt-2">

@@ -150,7 +150,7 @@ export function EnquiryForm() {
             <Card className="border-border/50 py-6">
               <CardHeader>
                 <CardTitle>Request a Quote</CardTitle>
-                <CardDescription>
+                <CardDescription className="pb-4">
                   Fill out the form below and we'll get back to you with pricing information.
                 </CardDescription>
               </CardHeader>
