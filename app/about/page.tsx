@@ -283,7 +283,7 @@ export default function AboutPage() {
                 variant="outline"
                 className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground/10"
               >
-                <Link href="/services">Our Services</Link>
+                <Link href="/enterprises/services">Our Services</Link>
               </Button>
             </div>
           </motion.div>

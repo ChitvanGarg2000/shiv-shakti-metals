@@ -1,52 +1,60 @@
 'use client'
 
-import { Card } from "@/components/ui/card"
-
 import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from '@/components/ui/accordion'
+import DOMPurify from 'dompurify'
+import { ClientsCarousel } from '@/components/clients-section'
+import { EnquiryForm } from '@/components/enquiry-form'
 
 const services = [
   {
     title: 'Authorized Waste Recycling',
     description:
-      'We provide comprehensive authorized waste recycling solutions that enable enterprises to manage all types of waste materials responsibly. Our processes ensure full compliance with regulatory standards and complete traceability throughout the recycling lifecycle. We help you achieve your sustainability goals while maintaining transparent records for audit purposes.',
+      `We are a government-authorized recycler specializing in the scientific recycling of Electrical & Electronic Waste, Battery Waste, Plastic Waste, Insulated Wires, and Non-Ferrous Metals.
+All materials are handled strictly as per CPCB and UPPCB guidelines, ensuring environmentally sound recycling with complete traceability and documentation
+`,
   },
   {
     title: 'Medical Machine Disposal',
-    description:
-      'Safe and responsible disposal of medical equipment and machinery following strict regulatory guidelines. Our specialized team handles sensitive medical devices with proper decontamination protocols. We ensure all disposals are documented and compliant with healthcare waste management regulations.',
+    description:`We provide safe and authorized disposal of obsolete and end-of-life medical machines and healthcare equipment such as Ultrasound Machines, Ventilators, MRI Machines, ECG Units, X-Ray Equipment, and other medical, diagnostic, therapeutic, and life-support equipment.
+Our disposal process ensures regulatory compliance, data safety (where applicable), and zero environmental risk.
+`
   },
   {
     title: 'Secure Data Destruction',
     description:
-      'Complete and certified data destruction services ensuring comprehensive information security and compliance with data protection laws. We use industry-leading methods to permanently destroy all data on electronic devices and storage media. Our process includes certificates of destruction for your compliance records.',
+      `<p>We provide certified and secure data destruction services for data-bearing assets, including hard drives, servers, storage devices, and IT equipment, ensuring complete and irreversible data elimination.</p>
+<p>All data destruction activities are carried out using approved methods, maintaining strict confidentiality and supported by proper certification for audit and compliance purposes.</p>
+`,
   },
   {
     title: 'EPR Compliance & Documentation',
-    description:
-      'End-to-end EPR (Extended Producer Responsibility) compliance management with all necessary documentation and certifications. We manage your EPR obligations and maintain detailed records of waste collection and recycling. Our experts ensure you meet all statutory requirements and deadlines.',
+    description:`<p>We provide end-to-end support for Extended Producer Responsibility (EPR) compliance, including authorized collection, recycling, documentation, and provision of EPR credits as per applicable guidelines.</p>
+<p>
+Our structured processes and transparent reporting help producers, importers, and brand owners meet statutory obligations and remain audit-ready at all times.
+</p>`
   },
   {
     title: 'Corporate & Bulk Waste Pickup',
-    description:
-      'Scheduled collection and transportation of waste from your premises at convenient times. We provide flexible pickup schedules tailored to your operational needs and waste generation patterns. Our fleet ensures safe and efficient handling of bulk waste materials.',
+    description:`<p>We provide scheduled pickup services for corporates, institutions, bulk waste generators, manufacturers etc.</p>
+<p>
+Our logistics operations ensure safe handling, timely collection, and full compliance throughout the waste movement process.
+</p>`
   },
   {
     title: 'E-waste & Battery Waste Manifest',
-    description:
-      'Complete manifest documentation and disposal certificates for e-waste and battery materials. We maintain comprehensive records of all e-waste and battery handling for your compliance. Each disposal includes certified documentation for regulatory and audit purposes.',
+    description:`<p>We issue CPCB-compliant E-Waste and Battery Waste manifests along with authorized recycling and disposal certificates.</p>`
   },
   {
     title: 'Disposal Certificate',
-    description:
-      'Comprehensive disposal certificates provided for all waste streams after processing. These certificates serve as proof of proper disposal and are essential for regulatory compliance and corporate responsibility reporting. All certificates are issued by certified auditors.',
+    description:`<p>
+These documents ensure legal traceability, regulatory compliance, and confidence during inspections and audits.
+</p>`
   },
   {
     title: 'USG Machine Disposal',
@@ -55,8 +63,9 @@ const services = [
   },
   {
     title: 'Annual Return Filing',
-    description:
-      'Professional assistance with annual return filing and regulatory documentation. We help you compile all necessary data and submit returns to relevant authorities on time. Our team stays updated with changing regulations to ensure your filings are always compliant.',
+    description:`<p>We assist organizations in accurate and timely filing of annual returns as required under applicable environmental laws.</p>
+<p>Our expert support helps clients remain compliant, avoid penalties, and maintain a strong compliance record.</p>
+`
   },
 ]
 
@@ -102,7 +111,7 @@ export default function EnterprisesServicesPage() {
               circularity targets, ensure EPR compliance, and build efficient,
               traceable collection and recycling programs with us.
             </p>
-            
+
           </motion.div>
         </div>
       </section>
@@ -141,8 +150,7 @@ export default function EnterprisesServicesPage() {
                     </span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 bg-background/50">
-                    <p className="text-muted-foreground leading-relaxed">
-                      {service.description}
+                    <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(service.description) }}>
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -150,6 +158,10 @@ export default function EnterprisesServicesPage() {
             </Accordion>
           </motion.div>
         </div>
+      </section>
+
+      <section id="clients">
+              <ClientsCarousel />
       </section>
 
       {/* CTA Section */}
@@ -167,9 +179,7 @@ export default function EnterprisesServicesPage() {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Contact our experts and create your zero-waste economy today
             </p>
-            <Button asChild size="lg">
-              <Link href="/#enquiry">Contact Us Now</Link>
-            </Button>
+            <EnquiryForm />
           </motion.div>
         </div>
       </section>

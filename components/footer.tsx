@@ -21,27 +21,27 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/services" className="hover:text-primary transition-colors">
+                <Link href="/enterprises/services" className="hover:text-primary transition-colors">
                   Authorized Waste Recycling
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-primary transition-colors">
+                <Link href="/enterprises/services" className="hover:text-primary transition-colors">
                   Medical Machine Disposal
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-primary transition-colors">
+                <Link href="/enterprises/services" className="hover:text-primary transition-colors">
                   Secure Data Destruction
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-primary transition-colors">
+                <Link href="/enterprises/services" className="hover:text-primary transition-colors">
                   EPR Compliance & Documentation
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-primary transition-colors">
+                <Link href="/enterprises/services" className="hover:text-primary transition-colors">
                   Corporate & Bulk Waste Pickup
                 </Link>
               </li>
@@ -52,22 +52,22 @@ export function Footer() {
             <h3 className="font-semibold mb-4">More Services</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/services" className="hover:text-primary transition-colors">
+                <Link href="/enterprises/services" className="hover:text-primary transition-colors">
                   E-waste & Battery Waste Manifest
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-primary transition-colors">
+                <Link href="/enterprises/services" className="hover:text-primary transition-colors">
                   Disposal Certificate
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-primary transition-colors">
+                <Link href="/enterprises/services" className="hover:text-primary transition-colors">
                   USG Machine Disposal
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-primary transition-colors">
+                <Link href="/enterprises/services" className="hover:text-primary transition-colors">
                   Annual Return Filing
                 </Link>
               </li>

@@ -114,7 +114,7 @@ export function EnquiryForm() {
                   <Phone className="h-5 w-5 text-primary" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Phone</h3>
+                  <h3 className="font-semibold text-left">Phone</h3>
                   <p className="text-muted-foreground">+919068951095</p>
                 </div>
               </motion.div>
@@ -124,7 +124,7 @@ export function EnquiryForm() {
                   <Mail className="h-5 w-5 text-primary" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Email</h3>
+                  <h3 className="font-semibold text-left">Email</h3>
                   <p className="text-muted-foreground">shivshaktimetals2009@gmail.com</p>
                 </div>
               </motion.div>
@@ -134,8 +134,8 @@ export function EnquiryForm() {
                   <MapPin className="h-5 w-5 text-primary" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Location</h3>
-                  <p className="text-muted-foreground">Khasra no 545, Sikheda road, industrial area Vill, Modinagar, Uttar Pradesh 201204</p>
+                  <h3 className="font-semibold text-left">Location</h3>
+                  <p className="text-muted-foreground text-left">Khasra no 545, Sikheda road, industrial area Vill, <br />Modinagar, Uttar Pradesh 201204</p>
                 </div>
               </motion.div>
             </motion.div>
