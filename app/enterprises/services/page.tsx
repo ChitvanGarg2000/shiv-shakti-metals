@@ -59,7 +59,9 @@ These documents ensure legal traceability, regulatory compliance, and confidence
   {
     title: 'USG Machine Disposal',
     description:
-      'Specialized disposal services for Used/Spent Generator machines with proper handling protocols. We ensure environmentally responsible disposal of complex machinery and equipment. Complete documentation and certification are provided for each disposal.',
+      `<p>We undertake authorised collection, decontamination, and dismantling of end-of-life USG machines in accordance with applicable e-waste management rules.</p>
+<p>
+All components are processed through secure, compliant recycling channels to ensure environmental safety and regulatory compliance.</p>`,
   },
   {
     title: 'Annual Return Filing',

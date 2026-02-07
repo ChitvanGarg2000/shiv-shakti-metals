@@ -70,7 +70,7 @@ export function Header() {
             </Link>
 
             <Button asChild>
-              <Link href="/#enquiry">Make a Change</Link>
+              <Link href="/make-a-change">Make a Change</Link>
             </Button>
           </div>
 
@@ -152,7 +152,7 @@ export function Header() {
               </Link>
 
               <Button asChild className="w-full mt-2">
-                <Link href="/#enquiry" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/make-a-change" onClick={() => setMobileMenuOpen(false)}>
                   Make a Change
                 </Link>
               </Button>
