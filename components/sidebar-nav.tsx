@@ -32,7 +32,7 @@ export function SidebarNav({ isOpen, onClose }: SidebarNavProps) {
     },
     {
       label: 'FAQs',
-      href: '/faq',
+      href: '/faqs',
       icon: TableOfContents,
     },
   ]
