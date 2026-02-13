@@ -70,6 +70,18 @@ All components are processed through secure, compliant recycling channels to ens
 `
   },
 ]
+
+// Helper function to sanitize HTML safely in both SSR and client environments
+function sanitizeHTML(html: string): string {
+  if (typeof window === 'undefined') {
+    // During SSR, return the HTML as-is (it's already safe from your data)
+    // Or you could use a simple regex to strip script tags if needed
+    return html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+  }
+  // In browser environment, use DOMPurify
+  return DOMPurify.sanitize(html)
+}
+
 export default function EnterprisesServicesPage() {
   return (
     <main className="min-h-screen bg-background">
@@ -131,7 +143,7 @@ export default function EnterprisesServicesPage() {
                     </span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 bg-background/50">
-                    <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(service.description) }}>
+                    <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: sanitizeHTML(service.description) }}>
                     </p>
                   </AccordionContent>
                 </AccordionItem>
