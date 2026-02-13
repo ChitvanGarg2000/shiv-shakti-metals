@@ -218,7 +218,7 @@ export default function MakeAChangePage() {
               size="lg"
               className="mb-8"
             >
-              <Link href="https://snehcharitabletrust.org" target="_blank" rel="noopener noreferrer">
+              <Link href="https://snehcharity.com/" target="_blank" rel="noopener noreferrer">
                 Be A Change / Get Involved
               </Link>
             </Button>
