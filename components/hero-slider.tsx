@@ -1,12 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react"
-import Slider from "react-slick"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { motion } from "framer-motion"
-import { Button } from "./ui/button"
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import dynamic from "next/dynamic"
 
 const Countdown = dynamic(() => import("./app/CountDown"), { ssr: false })

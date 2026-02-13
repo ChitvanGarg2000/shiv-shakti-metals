@@ -2,9 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 interface Testimonial {
   id: string
@@ -64,30 +65,6 @@ const testimonials: Testimonial[] = [
 ]
 
 export function TestimonialsSection() {
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-    dots: true,
-    dotsClass: 'slick-dots custom-dots',
-  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -117,37 +94,48 @@ export function TestimonialsSection() {
           </p>
         </motion.div>
 
-        <style>{`
-          .slick-slide {
-            padding: 0 16px;
-          }
-          .slick-list {
-            margin: 0 -16px;
-          }
-          .slick-prev,
-          .slick-next {
-            display: none;
-          }
-          .custom-dots {
-            bottom: -40px;
-          }
-          .custom-dots li button:before {
-            color: var(--color-primary);
-            font-size: 8px;
-          }
-          .custom-dots li.slick-active button:before {
-            color: var(--color-primary);
-            opacity: 1;
-          }
-          .custom-dots li button:before {
+        <style dangerouslySetInnerHTML={{__html: `
+          .swiper-pagination-bullet {
+            background: hsl(var(--primary));
             opacity: 0.3;
+            width: 8px;
+            height: 8px;
           }
-        `}</style>
+          .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: hsl(var(--primary));
+          }
+        `}} />
 
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          <Slider {...settings}>
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={32}
+            slidesPerView={1}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              1024: {
+                slidesPerView: 2,
+              },
+              1280: {
+                slidesPerView: 3,
+              },
+            }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+              bulletActiveClass: 'swiper-pagination-bullet-active',
+            }}
+            loop={true}
+            className="!pb-12"
+          >
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="px-2">
+              <SwiperSlide key={testimonial.id}>
                 <motion.div
                   className="bg-card border border-border rounded-lg p-8 h-full flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
                   whileHover={{ y: -4 }}
@@ -175,9 +163,9 @@ export function TestimonialsSection() {
                     <p className="text-sm text-primary font-medium">{testimonial.company}</p>
                   </div>
                 </motion.div>
-              </div>
+              </SwiperSlide>
             ))}
-          </Slider>
+          </Swiper>
         </motion.div>
       </div>
     </section>

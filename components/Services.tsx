@@ -3,9 +3,10 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 interface WasteCategory {
   id: string
@@ -54,29 +55,6 @@ const wasteCategories: WasteCategory[] = [
 ]
 
 export function WasteCategoriesSection() {
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  }
 
   return (
     <section className="w-full pt-20 bg-gradient-to-b from-background to-background/80">
@@ -101,32 +79,48 @@ export function WasteCategoriesSection() {
 
         {/* Carousel */}
         <div className="relative">
-          <style>{`
-            .slick-slide {
-              padding: 0 12px;
+          <style dangerouslySetInnerHTML={{__html: `
+            .swiper-pagination-bullet {
+              background: hsl(var(--primary));
+              opacity: 0.3;
+              width: 8px;
+              height: 8px;
             }
-            .slick-list {
-              margin: 0 -12px;
+            .swiper-pagination-bullet-active {
+              opacity: 1;
+              background: hsl(var(--primary));
             }
-            .slick-prev:before,
-            .slick-next:before {
-              display: none;
-            }
-            .slick-dots {
-              bottom: -40px;
-            }
-            .slick-dots li button:before {
-              color: var(--color-primary, #16a34a);
-              font-size: 8px;
-            }
-            .slick-dots li.slick-active button:before {
-              color: var(--color-primary, #16a34a);
-            }
-          `}</style>
+          `}} />
 
-          <Slider {...settings}>
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={24}
+            slidesPerView={1}
+            breakpoints={{
+              768: {
+                slidesPerView: 1,
+              },
+              1024: {
+                slidesPerView: 2,
+              },
+              1200: {
+                slidesPerView: 3,
+              },
+            }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            pagination={{
+              clickable: true,
+              bulletActiveClass: 'swiper-pagination-bullet-active',
+            }}
+            loop={true}
+            className="!pb-12"
+          >
             {wasteCategories.map((category) => (
-              <div key={category.id} className="px-2">
+              <SwiperSlide key={category.id}>
                 <motion.div
                   whileHover={{ y: -8 }}
                   transition={{ duration: 0.3 }}
@@ -156,9 +150,9 @@ export function WasteCategoriesSection() {
                     </CardContent>
                   </Card>
                 </motion.div>
-              </div>
+              </SwiperSlide>
             ))}
-          </Slider>
+          </Swiper>
         </div>
       </div>
     </section>

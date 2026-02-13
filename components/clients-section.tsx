@@ -2,9 +2,9 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
+import 'swiper/css'
 
 interface ClientLogo {
   id: string
@@ -141,36 +141,6 @@ const clientLogos: ClientLogo[] = [
 ]
 
 export function ClientsCarousel() {
-  const settings = {
-    infinite: true,
-    speed: 3000,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-    ],
-  }
 
   return (
     <section className="w-full py-20 bg-background">
@@ -191,22 +161,33 @@ export function ClientsCarousel() {
         </motion.div>
 
         <div className="relative">
-          <style>{`
-            .slick-slide {
-              padding: 0 16px;
-            }
-            .slick-list {
-              margin: 0 -16px;
-            }
-            .slick-prev:before,
-            .slick-next:before {
-              display: none;
-            }
-          `}</style>
-
-          <Slider {...settings}>
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={32}
+            slidesPerView={2}
+            breakpoints={{
+              480: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+              1200: {
+                slidesPerView: 4,
+              },
+              1536: {
+                slidesPerView: 5,
+              },
+            }}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            speed={3000}
+            loop={true}
+          >
             {clientLogos.map((client) => (
-              <div key={client.id} className="px-2">
+              <SwiperSlide key={client.id}>
                 <motion.div
                   className="bg-card border border-border rounded-lg flex items-center justify-center p-6 h-32 hover:border-primary hover:shadow-lg transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
@@ -221,9 +202,9 @@ export function ClientsCarousel() {
                     />
                   </div>
                 </motion.div>
-              </div>
+              </SwiperSlide>
             ))}
-          </Slider>
+          </Swiper>
         </div>
       </div>
     </section>
