@@ -260,7 +260,7 @@ export default function MakeAChangePage() {
               {
                 icon: Instagram,
                 name: 'Instagram',
-                href: '#',
+                href: 'https://www.instagram.com/snehcharitabletrust?igsh=MWttZWVyOWw0Nzlldg==',
               },
               {
                 icon: Linkedin,
