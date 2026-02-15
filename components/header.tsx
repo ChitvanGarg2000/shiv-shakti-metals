@@ -2,7 +2,7 @@
 
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, ChevronDown } from "lucide-react"
@@ -13,6 +13,22 @@ export function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [enterprisesOpen, setEnterprisesOpen] = useState(false)
+  const enterprisesDropdownRef = useRef<HTMLDivElement>(null)
+
+  // Close desktop Enterprises dropdown when clicking outside (e.g. on tablets)
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        enterprisesOpen &&
+        enterprisesDropdownRef.current &&
+        !enterprisesDropdownRef.current.contains(event.target as Node)
+      ) {
+        setEnterprisesOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [enterprisesOpen])
 
   return (
     <>
@@ -26,22 +42,32 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8 flex-1 md:justify-end">
-            {/* Enterprises Dropdown */}
-            <div className="relative group">
-              <button className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+            {/* Enterprises Dropdown - hover (desktop) + click (tablets/touch) */}
+            <div className="relative group" ref={enterprisesDropdownRef}>
+              <button
+                type="button"
+                onClick={() => setEnterprisesOpen(!enterprisesOpen)}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+                aria-expanded={enterprisesOpen}
+                aria-haspopup="true"
+              >
                 Enterprises
-                <ChevronDown className="h-4 w-4" aria-hidden="true" />
+                <ChevronDown className={`h-4 w-4 transition-transform ${enterprisesOpen ? "rotate-180" : ""}`} aria-hidden="true" />
               </button>
-              <div className="absolute left-0 mt-0 w-48 bg-card border border-border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div
+                className={`absolute left-0 mt-0 w-48 bg-card border border-border rounded-md shadow-lg transition-all duration-200 ${enterprisesOpen ? "opacity-100 visible" : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"}`}
+              >
                 <Link
                   href="/enterprises/services"
                   className="block px-4 py-2 text-sm text-card-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                  onClick={() => setEnterprisesOpen(false)}
                 >
                   Our Services
                 </Link>
                 <Link
                   href="/enterprises/sectors"
                   className="block px-4 py-2 text-sm text-card-foreground hover:bg-primary/10 hover:text-primary transition-colors border-t border-border"
+                  onClick={() => setEnterprisesOpen(false)}
                 >
                   Our Sectors
                 </Link>
