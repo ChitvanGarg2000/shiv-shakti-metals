@@ -15,10 +15,11 @@ export function Header() {
   const [enterprisesOpen, setEnterprisesOpen] = useState(false)
   const enterprisesDropdownRef = useRef<HTMLDivElement>(null)
 
-  // Close desktop Enterprises dropdown when clicking outside (e.g. on tablets)
+  // Close desktop Enterprises dropdown when clicking outside (e.g. on tablets). Skip when mobile menu is open so mobile dropdown links remain clickable.
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
+        !mobileMenuOpen &&
         enterprisesOpen &&
         enterprisesDropdownRef.current &&
         !enterprisesDropdownRef.current.contains(event.target as Node)
@@ -28,7 +29,7 @@ export function Header() {
     }
     document.addEventListener("mousedown", handleClickOutside)
     return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, [enterprisesOpen])
+  }, [enterprisesOpen, mobileMenuOpen])
 
   return (
     <>
