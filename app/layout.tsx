@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: "Shiv Shakti Metals - Professional Metal Recycling & Scrap Services",
   description:
     "Leading metal recycling and scrap services. Turn your metal waste into revenue with our sustainable recycling solutions.",
+  icons: {
+    icon: "/logo.png",
+  },
 }
 
 export default function RootLayout({

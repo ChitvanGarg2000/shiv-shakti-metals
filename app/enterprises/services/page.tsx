@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { Suspense, useEffect, useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
@@ -93,7 +93,7 @@ function sanitizeHTML(html: string): string {
   return DOMPurify.sanitize(html)
 }
 
-export default function EnterprisesServicesPage() {
+function ServicesContent() {
   const searchParams = useSearchParams()
   const activeService = searchParams.get('service')
   const accordionRef = useRef<HTMLDivElement>(null)
@@ -199,5 +199,13 @@ export default function EnterprisesServicesPage() {
         </div>
       </section>
     </main>
+  )
+}
+
+export default function EnterprisesServicesPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-background" />}>
+      <ServicesContent />
+    </Suspense>
   )
 }

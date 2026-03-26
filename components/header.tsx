@@ -37,7 +37,7 @@ export function Header() {
         <nav className="container mx-auto flex h-20 items-center px-4 justify-between md:justify-start">
           {/* Logo */}
           <Link href="/" className="flex font-bold text-center items-center">
-            <Image src="/logo.png" alt="site-logo" width={56} height={56} className="me-2" />
+            <Image src="/logo.png" alt="site-logo" width={80} height={56} className="me-2" />
             <Image src="/logo-text.png" alt="site-logo" width={48} height={48} />
           </Link>
 
