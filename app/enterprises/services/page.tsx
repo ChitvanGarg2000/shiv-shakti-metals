@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
   Accordion,
@@ -13,6 +15,7 @@ import { EnquiryForm } from '@/components/enquiry-form'
 
 const services = [
   {
+    id: 'authorized-waste',
     title: 'Authorized Waste Recycling',
     description:
       `We are a government-authorized recycler specializing in the scientific recycling of Electrical & Electronic Waste, Battery Waste, Plastic Waste, Insulated Wires, and Non-Ferrous Metals.
@@ -20,12 +23,14 @@ All materials are handled strictly as per CPCB and UPPCB guidelines, ensuring en
 `,
   },
   {
+    id: 'medical-disposal',
     title: 'Medical Machine Disposal',
     description:`We provide safe and authorized disposal of obsolete and end-of-life medical machines and healthcare equipment such as Ultrasound Machines, Ventilators, MRI Machines, ECG Units, X-Ray Equipment, and other medical, diagnostic, therapeutic, and life-support equipment.
 Our disposal process ensures regulatory compliance, data safety (where applicable), and zero environmental risk.
 `
   },
   {
+    id: 'data-destruction',
     title: 'Secure Data Destruction',
     description:
       `<p>We provide certified and secure data destruction services for data-bearing assets, including hard drives, servers, storage devices, and IT equipment, ensuring complete and irreversible data elimination.</p>
@@ -33,6 +38,7 @@ Our disposal process ensures regulatory compliance, data safety (where applicabl
 `,
   },
   {
+    id: 'epr-compliance',
     title: 'EPR Compliance & Documentation',
     description:`<p>We provide end-to-end support for Extended Producer Responsibility (EPR) compliance, including authorized collection, recycling, documentation, and provision of EPR credits as per applicable guidelines.</p>
 <p>
@@ -40,6 +46,7 @@ Our structured processes and transparent reporting help producers, importers, an
 </p>`
   },
   {
+    id: 'bulk-waste',
     title: 'Corporate & Bulk Waste Pickup',
     description:`<p>We provide scheduled pickup services for corporates, institutions, bulk waste generators, manufacturers etc.</p>
 <p>
@@ -47,16 +54,19 @@ Our logistics operations ensure safe handling, timely collection, and full compl
 </p>`
   },
   {
+    id: 'ewaste-disposal',
     title: 'E-waste & Battery Waste Manifest',
     description:`<p>We issue CPCB-compliant E-Waste and Battery Waste manifests along with authorized recycling and disposal certificates.</p>`
   },
   {
+    id: 'manifest-disposal',
     title: 'Disposal Certificate',
     description:`<p>
 These documents ensure legal traceability, regulatory compliance, and confidence during inspections and audits.
 </p>`
   },
   {
+    id: 'machine-disposal',
     title: 'USG Machine Disposal',
     description:
       `<p>We undertake authorised collection, decontamination, and dismantling of end-of-life USG machines in accordance with applicable e-waste management rules.</p>
@@ -64,6 +74,7 @@ These documents ensure legal traceability, regulatory compliance, and confidence
 All components are processed through secure, compliant recycling channels to ensure environmental safety and regulatory compliance.</p>`,
   },
   {
+    id: 'annual-return',
     title: 'Annual Return Filing',
     description:`<p>We assist organizations in accurate and timely filing of annual returns as required under applicable environmental laws.</p>
 <p>Our expert support helps clients remain compliant, avoid penalties, and maintain a strong compliance record.</p>
@@ -83,6 +94,16 @@ function sanitizeHTML(html: string): string {
 }
 
 export default function EnterprisesServicesPage() {
+  const searchParams = useSearchParams()
+  const activeService = searchParams.get('service')
+  const accordionRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (activeService && accordionRef.current) {
+      accordionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [activeService])
+
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -128,15 +149,16 @@ export default function EnterprisesServicesPage() {
           </motion.div>
 
           <motion.div
+            ref={accordionRef}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <Accordion type="single" collapsible className="w-full border border-border rounded-lg overflow-hidden">
+            <Accordion type="single" collapsible defaultValue={activeService || undefined} className="w-full border border-border rounded-lg overflow-hidden">
               {services.map((service, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionItem key={service.id} value={service.id}>
                   <AccordionTrigger className="px-6 hover:bg-primary/5 transition-colors">
                     <span className="text-lg font-semibold text-foreground text-left">
                       {service.title}

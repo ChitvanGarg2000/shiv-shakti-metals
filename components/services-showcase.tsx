@@ -138,7 +138,7 @@ export function ServicesShowcase() {
               variants={itemVariants}
               className="group"
             >
-              <div className="flex items-center gap-4 p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors duration-300">
+              <Link href={`/enterprises/services?service=${service.id}`} className="flex items-center gap-4 p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors duration-300">
                 {/* Geometric Icon */}
                 <div className="flex-shrink-0">
                   <div className="relative h-12 w-12 flex items-center justify-center">
@@ -155,7 +155,7 @@ export function ServicesShowcase() {
                     {service.title}
                   </h3>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
