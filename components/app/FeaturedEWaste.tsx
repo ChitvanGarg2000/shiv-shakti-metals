@@ -22,7 +22,7 @@ export function FeaturedEwasteSection() {
     ]
 
     return (
-        <section className="w-full py-20 lg:py-32 bg-gradient-to-b from-background via-primary/5 to-background">
+        <section className="w-full py-20 lg:py-32">
             <div className="container mx-auto px-4">
                 {/* Main Content Grid */}
                 <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -34,7 +34,6 @@ export function FeaturedEwasteSection() {
                         viewport={{ once: true }}
                     >
                         <div className="mb-6">
-                            <span className="text-primary font-semibold text-lg">E-Waste</span>
                             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mt-3 mb-6">
                                 Building Zero E-Waste Solutions
                             </h2>

@@ -3,7 +3,7 @@
 import Image from "next/image"
 import dynamic from "next/dynamic"
 
-const Countdown = dynamic(() => import("./app/CountDown"), { ssr: false })
+// const Countdown = dynamic(() => import("./app/CountDown"), { ssr: false })
 
 /* ---------- Main Component ---------- */
 
@@ -38,7 +38,7 @@ export function HeroSlider() {
             Every second counts—reduce, reuse, recycle and build a cleaner future.
           </p>
         </div>
-        <Countdown />
+        {/* <Countdown /> */}
       </div>
     </section>
   )

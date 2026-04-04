@@ -66,7 +66,7 @@ export default function MakeAChangePage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10">
+      <section className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -84,7 +84,7 @@ export default function MakeAChangePage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 lg:py-32">
+      <section className="py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ export default function MakeAChangePage() {
       </section>
 
       {/* Approach Section */}
-      <section className="py-20 lg:py-32 bg-card/50">
+      <section className="py-12 lg:py-16 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -154,7 +154,7 @@ export default function MakeAChangePage() {
       </section>
 
       {/* Impact Section */}
-      <section className="py-20 lg:py-32">
+      <section className="py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -198,7 +198,7 @@ export default function MakeAChangePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-primary/5">
+      <section className="py-12 lg:py-16 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -227,7 +227,7 @@ export default function MakeAChangePage() {
       </section>
 
       {/* Community Section */}
-      <section className="py-20 lg:py-32">
+      <section className="py-12 lg:py-16">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -291,7 +291,7 @@ export default function MakeAChangePage() {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-16 lg:py-24 bg-card/50">
+      <section className="bg-card/50 mb-12">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}

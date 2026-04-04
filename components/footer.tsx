@@ -12,7 +12,7 @@ export function Footer() {
               <span className="font-bold text-lg">Shiv Shakti Metals</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Professional metal recycling services. Turn your scrap into value while supporting environmental
+              Professional E-waste and Hazardous waste. Turn your scrap into value while supporting environmental
               sustainability.
             </p>
           </div>
@@ -102,7 +102,7 @@ export function Footer() {
               <li><a href="tel:+919068951095">+919068951095</a></li>
               <li><a href="mailto:shivshaktimetals2009@gmail.com">shivshaktimetals2009@gmail.com</a></li>
               <li className="leading-relaxed">
-                Khasra no 545, Sikheda road, industrial area Vill, Modinagar, Uttar Pradesh 201204
+                Khasra no 545, Sikheda road, Industrial area, Modinagar, Ghaziabad, Uttar Pradesh 201204
               </li>
             </ul>
           </div>

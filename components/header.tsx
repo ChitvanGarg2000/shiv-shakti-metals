@@ -38,7 +38,11 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex font-bold text-center items-center">
             <Image src="/logo.png" alt="site-logo" width={80} height={56} className="me-2" />
-            <Image src="/logo-text.png" alt="site-logo" width={48} height={48} />
+            {/* <Image src="/logo-text.png" alt="site-logo" width={48} height={48} /> */}
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-[#2d7d36]">Shiv Shakti Metals</span>
+              <span className="text-[12px] font-normal text-[#bdd624] mt-[-4px]">Protecting People Planet Progress</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -89,12 +93,12 @@ export function Header() {
               Consumer
             </Link>
 
-            <Link
+            {/* <Link
               href="/faqs"
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               FAQs
-            </Link>
+            </Link> */}
 
             <Button asChild>
               <Link href="/make-a-change">Make a Change</Link>

@@ -48,7 +48,7 @@ export function CertificationsSection() {
   }
 
   return (
-    <section className="w-full py-20 bg-background">
+    <section className="w-full py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,14 +82,14 @@ export function CertificationsSection() {
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <Swiper
             modules={[Autoplay, Pagination]}
-            spaceBetween={32}
+            spaceBetween={24}
             slidesPerView={1}
             breakpoints={{
               640: {
-                slidesPerView: 1,
+                slidesPerView: 2,
               },
               1024: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
               1280: {
                 slidesPerView: 3,
@@ -107,12 +107,12 @@ export function CertificationsSection() {
             className="!pb-12"
           >
             {certificates.map((cert) => (
-              <SwiperSlide key={cert.id}>
+              <SwiperSlide key={cert.id} className="!flex justify-center">
                 <motion.div
-                  className="relative overflow-hidden rounded-lg border-2 border-muted bg-background shadow-md hover:shadow-xl transition-all duration-300 group h-full"
-                  whileHover={{ y: -4, scale: 1.05 }}
+                  className="relative overflow-hidden rounded-lg border-2 border-muted bg-background shadow-md hover:shadow-xl transition-all duration-300 group h-full max-w-[280px] w-full"
+                  whileHover={{ y: -4, scale: 1.02 }}
                 >
-                  <div className="relative aspect-[3/4] bg-muted/50">
+                  <div className="relative aspect-[4/5] bg-muted/50">
                     <Image
                       src={cert.image || '/placeholder.svg'}
                       alt={cert.title}

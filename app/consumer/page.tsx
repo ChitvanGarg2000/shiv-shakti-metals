@@ -71,7 +71,7 @@ export default function ConsumerPage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-12 lg:py-20 overflow-hidden bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ export default function ConsumerPage() {
       </section>
 
       {/* Bulk Consumer Section */}
-      <section className="py-20 lg:py-32 bg-card/50">
+      <section className="pt-12 lg:pt-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -152,43 +152,10 @@ export default function ConsumerPage() {
         </div>
       </section>
 
-      {/* Plant Section */}
-      <section className="py-20 lg:py-32">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Our Recycling Facility
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              State-of-the-art infrastructure for safe and compliant waste processing
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg"
-          >
-            <Image
-              src="/industrial-metal-recycling-facility-scrap-metal.jpg"
-              alt="Recycling plant"
-              fill
-              className="object-cover"
-            />
-          </motion.div>
-        </div>
-      </section>
-
       {/* Clients Section */}
-    <ClientsCarousel />
+      <section className='bg-muted/30 mt-12'>
+        <ClientsCarousel />
+      </section>
     </main>
   )
 }

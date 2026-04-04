@@ -96,10 +96,12 @@ export default function EnterprisessectorsPage() {
       </section>
 
       {/* Featured E-Waste Section */}
-      <FeaturedEwasteSection />
+
+        <FeaturedEwasteSection />
+
 
       {/* Sectors */}
-      <section>
+      <section className='bg-muted/30 mt-12 py-12'>
         <div className="container mx-auto px-4">
           <motion.div
             variants={containerVariants}
@@ -136,10 +138,14 @@ export default function EnterprisessectorsPage() {
       </section>
 
       {/* Clients Carousel */}
-      <ClientsCarousel />
+      <section>
+        <ClientsCarousel />
+      </section>
 
       {/* Contact Form */}
-      <EnquiryForm />
+      <section className='bg-muted/30'>
+        <EnquiryForm />
+      </section>
     </main>
   )
 }

@@ -57,7 +57,7 @@ const wasteCategories: WasteCategory[] = [
 export function WasteCategoriesSection() {
 
   return (
-    <section className="w-full pt-20 bg-gradient-to-b from-background to-background/80">
+    <section className="w-full pt-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -68,7 +68,7 @@ export function WasteCategoriesSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-2">India’s Trusted Authorized Recycling Partner</h2>
-          <div className="text-sm text-muted-foreground mb-4">
+          <div className="text-sm text-muted-foreground mb-4 font-bold">
             CPCB & UPPCB Approved | ISO Certified | EPR Compliance Experts
           </div>
           <p className="text-xl text-primary font-semibold mb-2">

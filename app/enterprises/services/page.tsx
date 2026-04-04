@@ -12,11 +12,24 @@ import {
 import DOMPurify from 'dompurify'
 import { ClientsCarousel } from '@/components/clients-section'
 import { EnquiryForm } from '@/components/enquiry-form'
+import {
+  Recycle,
+  Stethoscope,
+  ShieldCheck,
+  FileCheck,
+  Truck,
+  Battery,
+  Award,
+  Monitor,
+  CalendarCheck,
+  type LucideIcon,
+} from 'lucide-react'
 
-const services = [
+const services: { id: string; title: string; description: string; icon: LucideIcon }[] = [
   {
     id: 'authorized-waste',
     title: 'Authorized Waste Recycling',
+    icon: Recycle,
     description:
       `We are a government-authorized recycler specializing in the scientific recycling of Electrical & Electronic Waste, Battery Waste, Plastic Waste, Insulated Wires, and Non-Ferrous Metals.
 All materials are handled strictly as per CPCB and UPPCB guidelines, ensuring environmentally sound recycling with complete traceability and documentation
@@ -25,6 +38,7 @@ All materials are handled strictly as per CPCB and UPPCB guidelines, ensuring en
   {
     id: 'medical-disposal',
     title: 'Medical Machine Disposal',
+    icon: Stethoscope,
     description:`We provide safe and authorized disposal of obsolete and end-of-life medical machines and healthcare equipment such as Ultrasound Machines, Ventilators, MRI Machines, ECG Units, X-Ray Equipment, and other medical, diagnostic, therapeutic, and life-support equipment.
 Our disposal process ensures regulatory compliance, data safety (where applicable), and zero environmental risk.
 `
@@ -32,6 +46,7 @@ Our disposal process ensures regulatory compliance, data safety (where applicabl
   {
     id: 'data-destruction',
     title: 'Secure Data Destruction',
+    icon: ShieldCheck,
     description:
       `<p>We provide certified and secure data destruction services for data-bearing assets, including hard drives, servers, storage devices, and IT equipment, ensuring complete and irreversible data elimination.</p>
 <p>All data destruction activities are carried out using approved methods, maintaining strict confidentiality and supported by proper certification for audit and compliance purposes.</p>
@@ -40,6 +55,7 @@ Our disposal process ensures regulatory compliance, data safety (where applicabl
   {
     id: 'epr-compliance',
     title: 'EPR Compliance & Documentation',
+    icon: FileCheck,
     description:`<p>We provide end-to-end support for Extended Producer Responsibility (EPR) compliance, including authorized collection, recycling, documentation, and provision of EPR credits as per applicable guidelines.</p>
 <p>
 Our structured processes and transparent reporting help producers, importers, and brand owners meet statutory obligations and remain audit-ready at all times.
@@ -48,6 +64,7 @@ Our structured processes and transparent reporting help producers, importers, an
   {
     id: 'bulk-waste',
     title: 'Corporate & Bulk Waste Pickup',
+    icon: Truck,
     description:`<p>We provide scheduled pickup services for corporates, institutions, bulk waste generators, manufacturers etc.</p>
 <p>
 Our logistics operations ensure safe handling, timely collection, and full compliance throughout the waste movement process.
@@ -56,11 +73,13 @@ Our logistics operations ensure safe handling, timely collection, and full compl
   {
     id: 'ewaste-disposal',
     title: 'E-waste & Battery Waste Manifest',
+    icon: Battery,
     description:`<p>We issue CPCB-compliant E-Waste and Battery Waste manifests along with authorized recycling and disposal certificates.</p>`
   },
   {
     id: 'manifest-disposal',
     title: 'Disposal Certificate',
+    icon: Award,
     description:`<p>
 These documents ensure legal traceability, regulatory compliance, and confidence during inspections and audits.
 </p>`
@@ -68,6 +87,7 @@ These documents ensure legal traceability, regulatory compliance, and confidence
   {
     id: 'machine-disposal',
     title: 'USG Machine Disposal',
+    icon: Monitor,
     description:
       `<p>We undertake authorised collection, decontamination, and dismantling of end-of-life USG machines in accordance with applicable e-waste management rules.</p>
 <p>
@@ -76,6 +96,7 @@ All components are processed through secure, compliant recycling channels to ens
   {
     id: 'annual-return',
     title: 'Annual Return Filing',
+    icon: CalendarCheck,
     description:`<p>We assist organizations in accurate and timely filing of annual returns as required under applicable environmental laws.</p>
 <p>Our expert support helps clients remain compliant, avoid penalties, and maintain a strong compliance record.</p>
 `
@@ -107,7 +128,7 @@ function ServicesContent() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-primary/5">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -131,7 +152,7 @@ function ServicesContent() {
       </section>
 
       {/* Services Accordion */}
-      <section className="py-20 lg:py-32 bg-card/50">
+      <section className="py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -160,7 +181,8 @@ function ServicesContent() {
               {services.map((service, index) => (
                 <AccordionItem key={service.id} value={service.id}>
                   <AccordionTrigger className="px-6 hover:bg-primary/5 transition-colors">
-                    <span className="text-lg font-semibold text-foreground text-left">
+                    <span className="flex items-center gap-3 text-lg font-semibold text-foreground text-left">
+                      <service.icon className="h-5 w-5 text-primary shrink-0" aria-hidden="true" />
                       {service.title}
                     </span>
                   </AccordionTrigger>
@@ -175,12 +197,12 @@ function ServicesContent() {
         </div>
       </section>
 
-      <section id="clients">
+      <section id="clients" className='bg-muted/30'>
               <ClientsCarousel />
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-primary/5">
+      <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -204,7 +226,7 @@ function ServicesContent() {
 
 export default function EnterprisesServicesPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-background" />}>
+    <Suspense fallback={<div className="min-h-screen" />}>
       <ServicesContent />
     </Suspense>
   )

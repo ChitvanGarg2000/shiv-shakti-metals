@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { CertificationsSection } from "@/components/certifications-section"
 import { EnquiryForm } from "@/components/enquiry-form"
 
@@ -29,9 +30,9 @@ export default function AboutPage() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-muted py-16 md:py-24">
+      <section className="bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -71,7 +72,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="bg-muted py-16 md:py-20">
+      <section className="bg-muted/30 py-16 md:py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -166,7 +167,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-muted py-16 md:py-20">
+      <section className="bg-muted/30 py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <motion.h2
@@ -229,8 +230,43 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Plant Section */}
       <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Our Recycling Facility
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              State-of-the-art infrastructure for safe and compliant waste processing
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg"
+          >
+            <Image
+              src="/industrial-metal-recycling-facility-scrap-metal.jpg"
+              alt="Recycling plant"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="bg-muted/30 py-16 md:py-20">
         <div className=" mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -241,7 +277,7 @@ export default function AboutPage() {
           >
             <CertificationsSection />
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-pretty">
-              Certified excellence in recycling, environmental management, and quality standards. All certifications are regularly audited and maintained to ensure compliance with international standards. Our government authorization since 2009 reflects our unwavering commitment to regulatory excellence and industry leadership.
+              Certified excellence in recycling, environmental management, and quality standards. All certifications are regularly audited and maintained to ensure compliance with ISO standards. Our government authorization since 2009 reflects our unwavering commitment to regulatory excellence and industry leadership.
             </p>
           </motion.div>
         </div>
