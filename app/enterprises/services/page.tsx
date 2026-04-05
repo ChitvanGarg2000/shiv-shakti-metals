@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import {
   Accordion,
   AccordionItem,
@@ -128,8 +129,18 @@ function ServicesContent() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section className="relative py-28 lg:py-40 overflow-hidden">
+        {/* Banner Image */}
+        <Image
+          src="/service_banner.jpeg"
+          alt="Our Services Banner"
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -137,16 +148,15 @@ function ServicesContent() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               We are your
               <span className="text-primary block text-2xl lg:text-3xl mt-2">Zero Waste Economy</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white/80 mb-8">
               We enable enterprises to responsibly manage e-waste—achieve
               circularity targets, ensure EPR compliance, and build efficient,
               traceable collection and recycling programs with us.
             </p>
-
           </motion.div>
         </div>
       </section>
