@@ -42,7 +42,7 @@ const wasteCategories: WasteCategory[] = [
     id: '4',
     title: 'Plastic Waste',
     description: 'Scientific segregation and recycling of Industrial & electronic plastic scrap',
-    image: '/plastic-waste.jpeg',
+    image: '/plastic.jpeg',
     icon: '♻️',
   },
   {
@@ -50,6 +50,13 @@ const wasteCategories: WasteCategory[] = [
     title: 'Insulated Wires & Cables',
     description: 'Secure and controlled material recovery of insulated wire and cable scrap',
     image: '/insulated-wire.jpeg',
+    icon: '🔌',
+  },
+  {
+    id: '6',
+    title: 'Medical Equipment',
+    description: 'Secure and controlled material recovery of insulated wire and cable scrap',
+    image: '/medical_equipment.jpeg',
     icon: '🔌',
   },
 ]

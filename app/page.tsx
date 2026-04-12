@@ -15,10 +15,14 @@ export default function HomePage() {
         <HeroSlider />
         <WasteCategoriesSection />
         <ServicesShowcase />
-        <ClientsCarousel />
-        <CertificationsSection />
-        <TestimonialsSection />
-        <EnquiryForm />
+        <section className="w-full bg-muted/30 py-15">
+          <ClientsCarousel />
+        </section>
+        <section className="py-15">
+          <CertificationsSection />
+        </section>
+          <TestimonialsSection />
+          <EnquiryForm />
       </main>
     </div>
   )
