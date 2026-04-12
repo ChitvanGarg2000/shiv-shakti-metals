@@ -398,8 +398,9 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-
-      <EnquiryForm />
+      <section className="py-15">
+          <EnquiryForm />
+      </section>
     </div>
   )
 }

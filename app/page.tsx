@@ -22,7 +22,9 @@ export default function HomePage() {
           <CertificationsSection />
         </section>
           <TestimonialsSection />
+        <section className="py-15">
           <EnquiryForm />
+        </section>
       </main>
     </div>
   )

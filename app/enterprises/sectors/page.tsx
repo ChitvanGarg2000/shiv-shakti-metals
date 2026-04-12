@@ -138,12 +138,12 @@ export default function EnterprisessectorsPage() {
       </section>
 
       {/* Clients Carousel */}
-      <section>
+      <section className='py-15'>
         <ClientsCarousel />
       </section>
 
       {/* Contact Form */}
-      <section className='bg-muted/30'>
+      <section className='py-15 bg-muted/30'>
         <EnquiryForm />
       </section>
     </main>

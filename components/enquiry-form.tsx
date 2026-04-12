@@ -172,7 +172,7 @@ export function EnquiryForm() {
   }
 
   return (
-    <section id="enquiry" className="py-12 md:py-16">
+    <section id="enquiry">
       <div className="container mx-auto px-4">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
           <motion.div

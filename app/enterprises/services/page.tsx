@@ -207,7 +207,7 @@ function ServicesContent() {
         </div>
       </section>
 
-      <section id="clients" className='bg-muted/30'>
+      <section id="clients" className='py-15 bg-muted/30'>
               <ClientsCarousel />
       </section>
 
@@ -226,7 +226,9 @@ function ServicesContent() {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Contact our experts and create your zero-waste economy today
             </p>
+            <section className="w-full py-12">
             <EnquiryForm />
+            </section>
           </motion.div>
         </div>
       </section>

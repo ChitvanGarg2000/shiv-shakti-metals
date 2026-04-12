@@ -153,7 +153,7 @@ export default function ConsumerPage() {
       </section>
 
       {/* Clients Section */}
-      <section className='bg-muted/30 mt-12'>
+      <section className='py-15 bg-muted/30 mt-12'>
         <ClientsCarousel />
       </section>
     </main>
