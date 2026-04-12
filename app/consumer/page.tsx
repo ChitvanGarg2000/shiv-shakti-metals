@@ -102,13 +102,13 @@ export default function ConsumerPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
                 Bulk Consumer
               </h2>
               <p className="text-sm text-muted-foreground mb-2 font-semibold">
                 Over 75% of e-waste in India comes from public or private organisations
               </p>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-lg text-muted-foreground my-8 leading-relaxed">
                 We help startups, corporates, hotels, colleges or government institutions in disposing waste responsibly. If you're a bulk consumer, Shiv Shakti Metals can help you in:
               </p>
 
