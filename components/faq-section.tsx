@@ -5,44 +5,104 @@ import { motion } from "framer-motion"
 
 const faqs = [
   {
-    question: "What types of metals do you accept?",
+    question: "What services does Shiv Shakti Metals provide?",
     answer:
-      "We accept all ferrous metals (steel, iron, cast iron) and non-ferrous metals including copper, aluminum, brass, bronze, stainless steel, lead, zinc, and nickel alloys. Contact us if you have specific materials not listed.",
+      "We provide a wide range of recycling and disposal services including e-waste recycling, battery waste management, medical equipment disposal, secure data destruction, and corporate bulk waste pickup.",
   },
   {
-    question: "How do you determine pricing for scrap metal?",
+    question: "What is e-waste and why is it important to recycle it?",
     answer:
-      "Our pricing is based on current market rates for specific metal types, weight, and purity. We use certified scales and provide transparent pricing. Prices fluctuate with the commodity market, so we recommend calling for current rates.",
+      "E-waste includes discarded electronic devices such as computers, laptops, mobiles, servers, and batteries. Recycling prevents environmental pollution and helps recover valuable materials like metals and plastics.",
   },
   {
-    question: "Do you offer pickup services?",
+    question: "Are you an authorized e-waste recycler?",
     answer:
-      "Yes, we provide convenient pickup services for both residential and commercial customers. Pickup availability depends on location and quantity. Contact us to schedule a pickup and discuss any minimum requirements.",
+      "Yes, we operate as an authorized waste recycling service provider ensuring compliance with government regulations and environmental standards.",
   },
   {
-    question: "How should I prepare my scrap metal?",
+    question: "Do you provide pickup services for e-waste?",
     answer:
-      "Separate different types of metals when possible to maximize value. Remove any non-metal attachments (plastic, wood, rubber). Clean metals typically fetch better prices. Our team can advise on preparation for your specific materials.",
+      "Yes, we offer corporate and bulk waste pickup services, making it convenient for businesses and institutions to dispose of their waste responsibly.",
   },
   {
-    question: "What are your operating hours?",
+    question: "What types of e-waste do you accept?",
     answer:
-      "We are open Monday through Friday from 7:00 AM to 5:00 PM, and Saturdays from 8:00 AM to 2:00 PM. We are closed on Sundays and major holidays. Special pickup arrangements can be made for large commercial loads.",
+      "We accept computers and laptops, mobile phones, servers and IT equipment, batteries, medical electronic equipment, and industrial electronic scrap.",
   },
   {
-    question: "Do I need to sort my scrap metal?",
+    question: "How do you ensure secure data destruction?",
     answer:
-      "While not required, sorting your metals can increase their value significantly. We accept mixed loads, but separated metals by type (copper, aluminum, steel, etc.) receive higher per-pound rates.",
+      "We follow strict protocols for data destruction to ensure that all sensitive data from devices is permanently erased or destroyed before recycling.",
   },
   {
-    question: "Is there a minimum quantity required?",
+    question: "Do you provide certificates after disposal?",
     answer:
-      "We accept loads of all sizes. For drop-off, there is no minimum. For pickup services, we typically require a minimum quantity depending on your location. Contact us to discuss your specific situation.",
+      "Yes, we provide disposal certificates and documentation for compliance and audit purposes after proper recycling.",
   },
   {
-    question: "What environmental certifications do you hold?",
+    question: "What is EPR compliance and how do you help?",
     answer:
-      "We are fully licensed and comply with all EPA and state environmental regulations. Our facility follows responsible recycling practices to minimize environmental impact and promote sustainability in the metal recycling industry.",
+      "EPR (Extended Producer Responsibility) is a regulatory requirement for managing e-waste. We assist companies with documentation, compliance, and reporting for EPR obligations.",
+  },
+  {
+    question: "Can individuals also give e-waste for recycling?",
+    answer:
+      "Yes, both individuals and businesses can provide e-waste to us. However, bulk and corporate waste are our primary focus.",
+  },
+  {
+    question: "What happens to the e-waste after collection?",
+    answer:
+      "The waste undergoes segregation, dismantling, material recovery, and recycling or safe disposal. This ensures minimal environmental impact.",
+  },
+  {
+    question: "Do you handle battery recycling?",
+    answer:
+      "Yes, we manage battery waste and provide proper manifest documentation for safe handling and recycling.",
+  },
+  {
+    question: "Do you recycle medical machines?",
+    answer:
+      "Yes, we specialize in safe disposal of medical machines like USG and other electronic healthcare equipment.",
+  },
+  {
+    question: "Is your recycling process environmentally safe?",
+    answer:
+      "Yes, we follow environmentally responsible processes to reduce pollution and maximize resource recovery.",
+  },
+  {
+    question: "How can businesses partner with you?",
+    answer:
+      "Businesses can contact us for bulk waste pickup, annual recycling contracts, compliance support, and waste management consultation.",
+  },
+  {
+    question: "Do you provide annual return filing support?",
+    answer:
+      "Yes, we assist companies in filing annual returns related to e-waste compliance.",
+  },
+  {
+    question: "What industries do you serve?",
+    answer:
+      "We serve corporates and IT companies, hospitals and healthcare facilities, educational institutions, and manufacturing units.",
+  },
+  {
+    question: "How do you determine the value of scrap?",
+    answer:
+      "The value depends on the type of material (metal, battery, electronic parts), quantity, and prevailing market rates.",
+  },
+  {
+    question: "Why should we choose Shiv Shakti Metals?",
+    answer:
+      "Because we are an authorized recycler with end-to-end waste management, secure data handling, compliance support, and environment-friendly practices.",
+  },
+  {
+    question: "Where is your company located?",
+    answer:
+      "Our facility is located in Modinagar, Uttar Pradesh, serving clients across regions.",
+  },
+  {
+    question: "How can we contact you?",
+    answer:
+      "You can contact us via phone, email, or website enquiry form to request quotes or services.",
   },
 ]
 
@@ -78,7 +138,7 @@ export function FAQSection() {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">Frequently Asked Questions</h2>
           <p className="text-lg text-muted-foreground text-pretty">
-            Find answers to common questions about our metal recycling services.
+            Find answers to common questions about our e-waste recycling and compliance services.
           </p>
         </motion.div>
 
