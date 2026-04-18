@@ -17,18 +17,12 @@ const facilityImages = [
   { src: "/consumer2.jpeg", alt: "Consumer waste collection" },
   { src: "/cosumer1.jpeg", alt: "Consumer waste handling" },
   { src: "/ewaste-section.jpeg", alt: "E-waste section" },
-  { src: "/ewaste.jpeg", alt: "E-waste recycling" },
   { src: "/eWaste.png", alt: "E-waste graphic" },
   { src: "/IMG_0619.jpg.jpeg", alt: "Facility image 0619" },
   { src: "/IMG_0630.jpg.jpeg", alt: "Facility image 0630" },
   { src: "/IMG_0638.JPG.jpeg", alt: "Facility image 0638" },
-  { src: "/insulated-wire.jpeg", alt: "Insulated wire recycling" },
   { src: "/medical-waste.jpeg", alt: "Medical waste recycling" },
   { src: "/medical_equipment.jpeg", alt: "Medical equipment recycling" },
-  { src: "/non-ferrous.jpeg", alt: "Non-ferrous recycling" },
-  { src: "/plastic.jpeg", alt: "Plastic recycling" },
-  { src: "/recycling-facility-sustainable-environment.png", alt: "Sustainable recycling facility" },
-  { src: "/serviceOffer.jpeg", alt: "Service offer" },
   { src: "/service_banner.jpeg", alt: "Service banner" },
 ]
 
@@ -107,11 +101,11 @@ export default function AboutPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={containerVariants}
-            className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8"
+            className="max-w-5xl mx-auto flex flex-col gap-8"
           >
-            <motion.div variants={itemVariants}>
-              <Card>
-                <CardContent className="p-8">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-8 items-stretch">
+              <Card className="w-full sm:w-1/2 h-auto flex flex-col">
+                <CardContent className="p-8 flex flex-col justify-center flex-1">
                   <div className="flex items-center gap-3 mb-4">
                     <Target className="h-8 w-8 text-primary" />
                     <h3 className="text-2xl font-bold text-foreground">Our Mission</h3>
@@ -132,17 +126,27 @@ export default function AboutPage() {
                   </p>
                 </CardContent>
               </Card>
+              <Card className="w-full sm:w-1/2 h-auto overflow-hidden">
+                <CardContent className="p-0 h-full relative">
+                  <Image src="/mission.png" alt="Mission" fill className="object-fill"/>
+                </CardContent>
+              </Card>
             </motion.div>
 
-            <motion.div variants={itemVariants}>
-              <Card>
-                <CardContent className="p-8">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-8 items-stretch">
+              <Card className="w-full sm:w-1/2 h-auto overflow-hidden">
+                <CardContent className="p-0 h-full relative">
+                  <Image src="/vision.png" alt="Vision" fill className="object-fill"/>
+                </CardContent>
+              </Card>
+              <Card className="w-full sm:w-1/2 h-auto flex flex-col">
+                <CardContent className="p-8 flex flex-col justify-center flex-1">
                   <div className="flex items-center gap-3 mb-4">
                     <Leaf className="h-8 w-8 text-primary" />
                     <h3 className="text-2xl font-bold text-foreground">Our Vision</h3>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    To be recognised as India’s most trusted and
+                    To be recognised as India's most trusted and
                     prominent recycling partner, not just by the
                     volume of material we process, but by the
                     integrity and excellence embedded in every facet

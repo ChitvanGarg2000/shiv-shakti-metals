@@ -197,7 +197,7 @@ export function EnquiryForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-left">Phone</h3>
-                  <p className="text-muted-foreground">+919068951095</p>
+                  <p className="text-muted-foreground">+919068951095, +919350754808</p>
                 </div>
               </motion.div>
 
@@ -207,7 +207,7 @@ export function EnquiryForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-left">Email</h3>
-                  <p className="text-muted-foreground">shivshaktimetals2009@gmail.com</p>
+                  <p className="text-muted-foreground">shivshaktimetals2009@gmail.com, recyclers@shivshaktimetals.com</p>
                 </div>
               </motion.div>
 

@@ -41,7 +41,7 @@ export function Header() {
             {/* <Image src="/logo-text.png" alt="site-logo" width={48} height={48} /> */}
             <div className="flex flex-col">
               <span className="text-2xl font-bold text-[#2d7d36]">Shiv Shakti Metals</span>
-              <span className="text-[12px] font-normal text-[#bdd624] mt-[-4px]">Protecting People Planet Progress</span>
+              <span className="text-[12px] font-normal text-[#5e962b] mt-[-4px]">Protecting People Planet Progress</span>
             </div>
           </Link>
 

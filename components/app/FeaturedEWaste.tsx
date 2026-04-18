@@ -10,13 +10,13 @@ import { CheckCircle, Zap } from 'lucide-react'
 export function FeaturedEwasteSection() {
     const stats = [
         {
-            label: 'E-Waste Collected',
+            label: 'Waste Collected',
             value: '10,000+',
             unit: 'Tonnes',
         },
         {
             label: 'Clients Partner',
-            value: '40+',
+            value: '450+',
             unit: 'Global Brands',
         },
     ]

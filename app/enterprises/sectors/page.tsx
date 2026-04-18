@@ -10,7 +10,8 @@ import {
   Radio,
   Zap,
   Cable,
-  Radiation
+  Radiation,
+  Stethoscope
 } from 'lucide-react'
 
 const sectors = [
@@ -22,7 +23,7 @@ const sectors = [
   },
   {
     icon: Battery,
-    title: 'Lead Acid Batteries',
+    title: 'Hazardous waste',
     heading: 'Sustainable Battery Recycling',
     description:
       'Lead acid batteries are rechargeable batteries commonly used in vehicles, inverters, UPS systems, and industrial applications. These batteries mainly include automotive batteries, inverter batteries, UPS batteries, and industrial batteries. The rising use of vehicles and power backup systems has significantly increased battery waste generation. If disposed of improperly, lead and acid can leak into the environment, causing serious soil and water pollution. Recycling through authorized facilities helps recover lead safely and prevents hazardous exposure while conserving natural resources.',
@@ -32,7 +33,7 @@ const sectors = [
     title: 'Plastic Waste',
     heading: 'Advanced Plastic Waste Management',
     description:
-      'Plastic waste refers to discarded plastic materials generated from domestic, commercial, and industrial use. It includes packaging materials, containers, plastic parts, bottles, and industrial plastic scrap. Due to increased consumption and single-use plastics, plastic waste is continuously increasing worldwide. Non-biodegradable plastic harms wildlife, blocks drainage systems, and releases toxic gases when burned. Proper segregation and recycling of plastic waste help reduce landfill burden and promote sustainable reuse of materials.',
+      'Plastic waste in our operations refers to materials recovered from authorized hazardous waste and e-waste streams during their recycling process, rather than domestic or general industrial plastic. Such plastic, if not handled properly, can lead to environmental pollution and potential health risks. We ensure its safe segregation, controlled processing, and compliant recycling, enabling responsible material recovery while minimizing environmental impact.',
   },
   {
     icon: Zap,
@@ -47,6 +48,13 @@ const sectors = [
     heading: 'Copper Cable Processing',
     description:
       'Insulated cable scrap refers to discarded electrical and communication cables covered with protective insulation material. It includes electrical wires, communication cables, power cables, and other insulated conductors. With expanding infrastructure and electrical installations, cable waste is increasing rapidly. Burning cables to extract metal releases toxic fumes that harm human health and the environment. Authorized recycling separates metal and insulation safely, allowing resource recovery while minimizing environmental impact.',
+  },
+  {
+    icon: Stethoscope,
+    title: 'Medical Equipment Waste',
+    heading: 'Condemned Medical Equipment Disposal',
+    description:
+      'Condemned medical equipment refers to healthcare devices that have reached end-of-life, are non-functional, or are no longer safe for use. This includes items such as ventilators, USG machines, cardiology machines, patient monitors, and other hospital equipment. If not disposed of properly, such equipment can pose environmental and health risks due to hazardous components. We ensure their safe dismantling, authorized recycling, and proper material recovery, minimizing risks and promoting environmentally responsible disposal practices.',
   },
 ]
 

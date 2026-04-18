@@ -4,8 +4,8 @@ import { Phone, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function FloatingCTA() {
-  const phoneNumber = "+919068951095" // Replace with actual business phone
-  const whatsappNumber = "9068951095" // Replace with actual WhatsApp number
+  const phoneNumber = "+919350754808" // Replace with actual business phone
+  const whatsappNumber = "9350754808" // Replace with actual WhatsApp number
 
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`

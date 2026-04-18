@@ -99,8 +99,8 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="tel:+919068951095">+919068951095</a></li>
-              <li><a href="mailto:shivshaktimetals2009@gmail.com">shivshaktimetals2009@gmail.com</a></li>
+              <li><a href="tel:+919068951095">+919068951095</a>, <a href="tel:+919350754808">+919350754808</a></li>
+              <li><a href="mailto:shivshaktimetals2009@gmail.com">shivshaktimetals2009@gmail.com</a>, <a href="mailto:recyclers@shivshaktimetals.com">recyclers@shivshaktimetals.com</a></li>
               <li className="leading-relaxed">
                 Khasra no 545, Sikheda road, Industrial area, Modinagar, Ghaziabad, Uttar Pradesh 201204
               </li>

@@ -20,7 +20,7 @@ export function HeroSlider() {
         >
           <source src="/banner.mp4" type="video/mp4" />
         </video> */}
-        <Image src="/banner.jpg" alt="banner" width={1000} height={1000} className="w-full h-full object-cover" />
+        <Image src="/banner.png" alt="banner" width={1000} height={1000} className="w-full h-full object-cover" />
       <div className="absolute inset-0 bg-linear-to-r min-h-full flex flex-col justify-center items-center md:items-start from-black/80 via-black/50 to-transparent sm:ps-[100px]">
         <div className="mb-8 w-[90%] mx-auto sm:w-full">
           <p className="text-sm md:text-base uppercase tracking-[0.25em] text-white/70">
