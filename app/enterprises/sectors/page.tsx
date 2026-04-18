@@ -80,9 +80,9 @@ const itemVariants = {
 
 export default function EnterprisessectorsPage() {
   return (
-    <main className="min-h-screen pt-10 lg:pt-20 bg-background">
+    <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-muted/30 py-10">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
