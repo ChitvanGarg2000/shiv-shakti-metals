@@ -26,14 +26,6 @@ const services = [
     title: 'Waste Pick-up',
   },
   {
-    icon: BookOpen,
-    title: 'Training & Awareness Webinars',
-  },
-  {
-    icon: FileCheck,
-    title: 'Disposal Certificate',
-  },
-  {
     icon: Lock,
     title: 'Data Destruction',
   },
