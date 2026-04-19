@@ -38,21 +38,21 @@ const services: Service[] = [
     color: 'bg-primary',
   },
   {
-    id: 'data-destruction',
-    title: 'Secure Data Destruction',
-    icon: <Lock className="h-8 w-8" />,
-    color: 'bg-primary',
-  },
-  {
-    id: 'epr-compliance',
-    title: 'EPR Compliance & Documentation',
-    icon: <Leaf className="h-8 w-8" />,
+    id: 'machine-disposal',
+    title: 'USG Machine Disposal',
+    icon: <WashingMachine className="h-8 w-8" />,
     color: 'bg-primary',
   },
   {
     id: 'bulk-waste',
     title: 'Corporate & Bulk Waste Pickup',
     icon: <Truck className="h-8 w-8" />,
+    color: 'bg-primary',
+  },
+  {
+    id: 'data-destruction',
+    title: 'Secure Data Destruction',
+    icon: <Lock className="h-8 w-8" />,
     color: 'bg-primary',
   },
   {
@@ -68,9 +68,9 @@ const services: Service[] = [
     color: 'bg-primary',
   },
   {
-    id: 'machine-disposal',
-    title: 'USG Machine Disposal',
-    icon: <WashingMachine className="h-8 w-8" />,
+    id: 'epr-compliance',
+    title: 'EPR Compliance & Documentation',
+    icon: <Leaf className="h-8 w-8" />,
     color: 'bg-primary',
   },
   {
@@ -120,7 +120,6 @@ export function ServicesShowcase() {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
             Comprehensive waste management and recycling solutions for enterprises
-            and individuals
           </p>
         </motion.div>
 

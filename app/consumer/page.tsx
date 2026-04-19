@@ -62,9 +62,19 @@ const itemVariants = {
 export default function ConsumerPage() {
   return (
     <main className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative py-12 lg:py-20 overflow-hidden bg-muted/30">
-        <div className="container mx-auto px-4">
+
+      <section className="relative py-28 lg:py-40 overflow-hidden md:min-h-screen">
+        {/* Banner Image */}
+        <Image
+          src="/sector-banner.jpeg"
+          alt="Our Services Banner"
+          fill
+          priority
+          className="object-cover object-top"
+        />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -72,17 +82,18 @@ export default function ConsumerPage() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              We bring zero-waste economy
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
+              We bring <span className='text-primary'>Zero-Waste Economy</span>
               <span className="block font-bold">accessible for everyone</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white mb-8">
               By 2030, global E-Waste generation is projected to reach approximately 82 million
               tonnes. Join with us for making recycling a habit of living.
             </p>
           </motion.div>
         </div>
       </section>
+
 
       {/* Bulk Consumer Section */}
       <section className="pt-12 lg:pt-20">

@@ -175,11 +175,11 @@ export function Header() {
               </Link>
 
               <Link
-                href="/faqs"
+                href="/contact-us"
                 className="text-sm font-medium text-card-foreground hover:text-primary transition-colors py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                FAQs
+                Contact Us
               </Link>
 
               <Button asChild className="w-full mt-2">

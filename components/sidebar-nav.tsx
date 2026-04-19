@@ -26,14 +26,9 @@ export function SidebarNav({ isOpen, onClose }: SidebarNavProps) {
       icon: Info,
     },
     {
-      label: 'Contact Now',
-      href: '/#enquiry',
+      label: 'Contact Us',
+      href: '/contact-us',
       icon: Phone,
-    },
-    {
-      label: 'FAQs',
-      href: '/faqs',
-      icon: TableOfContents,
     },
   ]
 

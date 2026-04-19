@@ -185,7 +185,7 @@ export function EnquiryForm() {
             <motion.div variants={itemVariants} className="space-y-4">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">Get In Touch</h2>
               <p className="text-lg text-muted-foreground text-pretty leading-relaxed">
-                Have questions about E-waste & Hazardous waste recycling? Fill out the form and our team will respond promptly
+                Have questions about waste recycling? Fill out the form and our team will respond promptly
                 with competitive pricing and scheduling options.
               </p>
             </motion.div>
@@ -197,7 +197,7 @@ export function EnquiryForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-left">Phone</h3>
-                  <p className="text-muted-foreground">+919068951095, +919350754808</p>
+                  <p className="text-muted-foreground">+919068951095<br /> +919350754808</p>
                 </div>
               </motion.div>
 
@@ -207,7 +207,7 @@ export function EnquiryForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-left">Email</h3>
-                  <p className="text-muted-foreground">shivshaktimetals2009@gmail.com, recyclers@shivshaktimetals.com</p>
+                  <p className="text-muted-foreground">shivshaktimetals2009@gmail.com<br /> recyclers@shivshaktimetals.com</p>
                 </div>
               </motion.div>
 
@@ -243,7 +243,6 @@ export function EnquiryForm() {
                     <Input
                       id="name"
                       name="name"
-                      placeholder="John Doe"
                       required
                       aria-required="true"
                       aria-invalid={!!errors.name}
@@ -259,7 +258,6 @@ export function EnquiryForm() {
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="john@example.com"
                       required
                       aria-required="true"
                       aria-invalid={!!errors.email}
@@ -275,7 +273,6 @@ export function EnquiryForm() {
                       id="phone"
                       name="phone"
                       type="tel"
-                      placeholder="+91 98765 43210"
                       required
                       aria-required="true"
                       aria-invalid={!!errors.phone}
@@ -301,7 +298,7 @@ export function EnquiryForm() {
                         aria-invalid={!!errors.role}
                         className={`w-full ${errors.role ? "border-destructive focus-visible:ring-destructive" : ""}`}
                       >
-                        <SelectValue placeholder="Select your role" />
+                        <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="enterprise">Enterprise Representatives</SelectItem>
@@ -347,12 +344,15 @@ export function EnquiryForm() {
                         aria-invalid={!!errors.sector}
                         className={`w-full ${errors.sector ? "border-destructive focus-visible:ring-destructive" : ""}`}
                       >
-                        <SelectValue placeholder="Select a sector" />
+                        <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="ewaste">E-waste</SelectItem>
-                        <SelectItem value="plastic">Plastic waste</SelectItem>
                         <SelectItem value="batteries">Batteries waste</SelectItem>
+                        <SelectItem value="medical-equipment">Medical Equipment</SelectItem>
+                        <SelectItem value="plastic">Plastic waste</SelectItem>
+                        <SelectItem value="insulated-wires">Insulated Wires</SelectItem>
+                        <SelectItem value="non-ferrous">Non Ferrous Metals</SelectItem>
                         <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>
@@ -365,7 +365,6 @@ export function EnquiryForm() {
                       <Input
                         id="otherSector"
                         name="otherSector"
-                        placeholder="e.g., Metal, Glass, Rubber"
                         required
                         aria-required="true"
                         aria-invalid={!!errors.otherSector}
@@ -382,11 +381,10 @@ export function EnquiryForm() {
                   </div> */}
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Additional Details</Label>
+                    <Label htmlFor="message">Additional Details (Optional)</Label>
                     <Textarea
                       id="message"
                       name="message"
-                      placeholder="Tell us about your scrap metal (quantity, location, pickup requirements, etc.)"
                       rows={4}
                     />
                   </div>

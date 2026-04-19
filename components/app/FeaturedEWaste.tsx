@@ -11,7 +11,7 @@ export function FeaturedEwasteSection() {
     const stats = [
         {
             label: 'Waste Collected',
-            value: '10,000+',
+            value: '15,000+',
             unit: 'Tonnes',
         },
         {
@@ -35,19 +35,19 @@ export function FeaturedEwasteSection() {
                     >
                         <div className="mb-6">
                             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mt-3 mb-6">
-                                Building Zero E-Waste Solutions
+                                Building Zero Waste Solutions
                             </h2>
                         </div>
 
                         <div className="space-y-6 text-muted-foreground leading-relaxed">
                             <p>
-                                India's E-Waste Rules have introduced the concept of Extended Producer Responsibility (EPR).
+                                India's Waste Rules have introduced the concept of Extended Producer Responsibility (EPR).
                                 Collective expertise from global technology brands and deep insight into the Indian waste ecosystem,
-                                SHIV SHAKTI METALS has created a zero E-waste solution that strengthens governance and transparency.
+                                SHIV SHAKTI METALS has created a zero Waste solution that strengthens governance and transparency.
                             </p>
 
                             <p>
-                                Together with 40+ clients, we have built a diverse, scalable, and fully traceable collection ecosystem,
+                                Together with 450+ clients, we have built a diverse, scalable, and fully traceable collection ecosystem,
                                 supported by robust auditing mechanisms across the entire e-waste value chain. Our programs ensure
                                 complete traceability of material movement while delivering compliant, impact-driven outcomes.
                             </p>
@@ -134,21 +134,39 @@ export function FeaturedEwasteSection() {
                     <h3 className="text-2xl font-bold text-foreground mb-6">Our Impact</h3>
                     <div className="grid md:grid-cols-3 gap-8">
                         <div>
-                            <p className="text-primary font-semibold text-sm mb-2">Traceability</p>
-                            <p className="text-muted-foreground">
-                                Complete material movement tracking from collection to final processing with full audit trails
+                            <p className="text-primary font-semibold text-md mb-2">Driving Sustainable Metal Recycling</p>
+                            <p className="text-muted-foreground text-sm">
+                                We actively contribute to environmental sustainability by promoting responsible metal recycling and reuse. By reducing industrial waste and encouraging circular economy practices, we help conserve natural resources and minimize environmental impact.
                             </p>
                         </div>
                         <div>
-                            <p className="text-primary font-semibold text-sm mb-2">Compliance</p>
-                            <p className="text-muted-foreground">
-                                Fully compliant with EPR regulations and India's E-Waste Rules with all required certifications
+                            <p className="text-primary font-semibold text-md mb-2">Supporting Industrial Growth Across Sectors</p>
+                            <p className="text-muted-foreground text-sm">
+                                Our materials play a critical role in industries such as infrastructure, power, automotive, and manufacturing. By supplying high-quality metals, we enable efficient production and long-lasting structural solutions across diverse sectors.
                             </p>
                         </div>
                         <div>
-                            <p className="text-primary font-semibold text-sm mb-2">Scalability</p>
-                            <p className="text-muted-foreground">
-                                Diverse ecosystem supporting businesses of all sizes with flexible, scalable solutions
+                            <p className="text-primary font-semibold text-md mb-2">Reducing Carbon Footprint</p>
+                            <p className="text-muted-foreground text-sm">
+                                Recycling metals requires significantly less energy compared to mining virgin materials. This reduces greenhouse gas emissions and helps combat climate change, contributing to a greener future.
+                            </p>
+                        </div>
+                        <div>
+                            <p className="text-primary font-semibold text-md mb-2">Ensuring Quality & Reliability</p>
+                            <p className="text-muted-foreground text-sm">
+                                We ensure that every material meets industry standards and delivers durability, strength, and performance. This commitment helps industries build safer and more reliable infrastructure for the future. 
+                            </p>
+                        </div>
+                        <div>
+                            <p className="text-primary font-semibold text-md mb-2">Efficient Collection & Supply Chain Network</p>
+                            <p className="text-muted-foreground text-sm">
+                                With a streamlined logistics and collection system, we ensure timely pickup, processing, and delivery of materials. This improves operational efficiency for our clients while maintaining transparency and trust.
+                            </p>
+                        </div>
+                        <div>
+                            <p className="text-primary font-semibold text-md mb-2">Contributing to a Circular Economy</p>
+                            <p className="text-muted-foreground text-sm">
+                                Our business model is aligned with the principles of a circular economy—where waste is transformed into valuable resources. This not only reduces landfill waste but also creates a sustainable loop of production and reuse.
                             </p>
                         </div>
                     </div>

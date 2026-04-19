@@ -19,24 +19,6 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: '1',
-    name: 'Rajesh Kumar',
-    company: 'TechCorp Industries',
-    role: 'Operations Manager',
-    content:
-      'Shiv Shakti Metals has been an exceptional partner for our e-waste disposal needs. Their professionalism, compliance documentation, and quick turnaround time have made our operations seamless.',
-    rating: 5,
-  },
-  {
-    id: '2',
-    name: 'Priya Sharma',
-    company: 'Manufacturing Solutions Ltd',
-    role: 'Sustainability Officer',
-    content:
-      'Their EPR compliance services have saved us considerable time and effort. The team is knowledgeable and always ready to provide comprehensive support for our recycling initiatives.',
-    rating: 5,
-  },
-  {
-    id: '3',
     name: 'Amit Patel',
     company: 'Global Electronics Inc',
     role: 'Facility Manager',
@@ -45,7 +27,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    id: '4',
+    id: '2',
     name: 'Neha Verma',
     company: 'Premier Corporate Group',
     role: 'CSR Manager',
@@ -54,7 +36,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    id: '5',
+    id: '3',
     name: 'Vikram Singh',
     company: 'Industrial Solutions Pvt Ltd',
     role: 'Environmental Head',

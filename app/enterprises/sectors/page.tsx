@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/card'
 import { ClientsCarousel } from '@/components/clients-section'
 import { EnquiryForm } from '@/components/enquiry-form'
 import { FeaturedEwasteSection } from '@/components/app/FeaturedEWaste'
+import Image from 'next/image'
 import {
   Battery,
   Radio,
@@ -17,9 +18,9 @@ import {
 const sectors = [
   {
     icon: Radiation,
-    title: 'E-Waste Decomposition',
+    title: 'E-Waste Disposal',
     heading: 'Safe E-Waste Recycling',
-    description:`E-waste refers to discarded electrical and electronic equipment that has reached the end of its useful life. E-waste includes items such as computers, laptops, mobile phones, printers, keyboards, hard disks, cables, and other electronic devices. With rapid technological upgrades and increasing electronic usage, e-waste is growing day by day. Improper disposal releases harmful substances like lead and mercury, which contaminate soil and water and affect human health. By sending e-waste to authorized recyclers, valuable metals can be recovered safely and environmental pollution can be reduced.`
+    description: `E-waste refers to discarded electrical and electronic equipment that has reached the end of its useful life. E-waste includes items such as computers, printers, UPS, AC, Refrigerator, keyboards, hard disks and other electronic devices. With rapid technological upgrades and increasing electronic usage, e-waste is growing day by day. Improper disposal releases harmful substances like lead and mercury, which contaminate soil and water and affect human health. By sending e-waste to authorized recyclers, valuable metals can be recovered safely and environmental pollution can be reduced.`
   },
   {
     icon: Battery,
@@ -44,10 +45,10 @@ const sectors = [
   },
   {
     icon: Cable,
-    title: 'Insulated Wires & Cables',
-    heading: 'Copper Cable Processing',
+    title: 'Insulated Wires',
+    heading: 'Wire Processing',
     description:
-      'Insulated cable scrap refers to discarded electrical and communication cables covered with protective insulation material. It includes electrical wires, communication cables, power cables, and other insulated conductors. With expanding infrastructure and electrical installations, cable waste is increasing rapidly. Burning cables to extract metal releases toxic fumes that harm human health and the environment. Authorized recycling separates metal and insulation safely, allowing resource recovery while minimizing environmental impact.',
+      'Insulated wire scrap refers to discarded electrical and communication wires covered with protective insulation material. It includes electrical wires, communication wires, power cables, and other insulated conductors. With expanding infrastructure and electrical installations, wire waste is increasing rapidly. Burning wires to extract metal releases toxic fumes that harm human health and the environment. Authorized recycling separates metal and insulation safely, allowing resource recovery while minimizing environmental impact.',
   },
   {
     icon: Stethoscope,
@@ -82,7 +83,37 @@ export default function EnterprisessectorsPage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-muted/30 py-10">
+      <section className="relative py-28 lg:py-40 overflow-hidden md:min-h-screen">
+        {/* Banner Image */}
+        <Image
+          src="/sector-banner.jpeg"
+          alt="Our Services Banner"
+          fill
+          priority
+          className="object-cover object-top"
+        />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Begin your
+              <span className="text-primary block text-2xl lg:text-3xl mt-2">Zero Waste Economy with us</span>
+            </h1>
+            {/* <p className="text-lg text-white/80 mb-8">
+              Creating scalable, inclusive e-waste circularity and EPR
+              solutions—guided by impact, enabled by technology.
+            </p> */}
+          </motion.div>
+        </div>
+      </section>
+      {/* <section className="relative overflow-hidden bg-muted/30 py-10">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -92,20 +123,19 @@ export default function EnterprisessectorsPage() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Begin your
+              
               <span className="text-primary block text-2xl lg:text-3xl mt-2">Zero Waste Economy with Us</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Creating scalable, inclusive e-waste circularity and EPR
-              solutions—guided by impact, enabled by technology.
+              
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Featured E-Waste Section */}
 
-        <FeaturedEwasteSection />
+      <FeaturedEwasteSection />
 
 
       {/* Sectors */}

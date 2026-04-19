@@ -30,7 +30,7 @@ export function HeroSlider() {
           <h2 className="mt-3 text-3xl md:text-5xl font-extrabold leading-tight text-white">
             Time is now, lets create{" "}
             <div className="bg-gradient-to-r from-green-400 via-emerald-300 to-lime-400 bg-clip-text text-transparent">
-              Zero- Waste economy
+              Zero-Waste Economy
             </div>
           </h2>
 

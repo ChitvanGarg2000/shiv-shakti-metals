@@ -40,9 +40,27 @@ All materials are handled strictly as per CPCB and UPPCB guidelines, ensuring en
     id: 'medical-disposal',
     title: 'Medical Machine Disposal',
     icon: Stethoscope,
-    description:`We provide safe and authorized disposal of obsolete and end-of-life medical machines and healthcare equipment such as Ultrasound Machines, Ventilators, MRI Machines, ECG Units, X-Ray Equipment, and other medical, diagnostic, therapeutic, and life-support equipment.
-Our disposal process ensures regulatory compliance, data safety (where applicable), and zero environmental risk.
-`
+    description: `We provide safe and authorized disposal of obsolete and end-of-life medical machines and healthcare equipment such as Ultrasound Machines, Ventilators, MRI Machines, ECG Units, X-Ray Equipment, and other medical, diagnostic, therapeutic, and life-support equipment.
+    Our disposal process ensures regulatory compliance, data safety (where applicable), and zero environmental risk.
+    `
+  },
+  {
+    id: 'machine-disposal',
+    title: 'USG Machine Disposal',
+    icon: Monitor,
+    description:
+      `<p>We undertake authorised collection, decontamination, and dismantling of end-of-life USG machines in accordance with applicable e-waste management rules.</p>
+  <p>
+  All components are processed through secure, compliant recycling channels to ensure environmental safety and regulatory compliance.</p>`,
+  },
+  {
+    id: 'bulk-waste',
+    title: 'Corporate & Bulk Waste Pickup',
+    icon: Truck,
+    description: `<p>We provide scheduled pickup services for corporates, institutions, bulk waste generators, manufacturers etc.</p>
+<p>
+Our logistics operations ensure safe handling, timely collection, and full compliance throughout the waste movement process.
+</p>`
   },
   {
     id: 'data-destruction',
@@ -54,51 +72,33 @@ Our disposal process ensures regulatory compliance, data safety (where applicabl
 `,
   },
   {
-    id: 'epr-compliance',
-    title: 'EPR Compliance & Documentation',
-    icon: FileCheck,
-    description:`<p>We provide end-to-end support for Extended Producer Responsibility (EPR) compliance, including authorized collection, recycling, documentation, and provision of EPR credits as per applicable guidelines.</p>
-<p>
-Our structured processes and transparent reporting help producers, importers, and brand owners meet statutory obligations and remain audit-ready at all times.
-</p>`
-  },
-  {
-    id: 'bulk-waste',
-    title: 'Corporate & Bulk Waste Pickup',
-    icon: Truck,
-    description:`<p>We provide scheduled pickup services for corporates, institutions, bulk waste generators, manufacturers etc.</p>
-<p>
-Our logistics operations ensure safe handling, timely collection, and full compliance throughout the waste movement process.
-</p>`
-  },
-  {
     id: 'ewaste-disposal',
     title: 'E-waste & Battery Waste Manifest',
     icon: Battery,
-    description:`<p>We issue CPCB-compliant E-Waste and Battery Waste manifests along with authorized recycling and disposal certificates.</p>`
+    description: `<p>We issue CPCB-compliant E-Waste and Battery Waste manifests along with authorized recycling and disposal certificates.</p>`
   },
   {
     id: 'manifest-disposal',
     title: 'Disposal Certificate',
     icon: Award,
-    description:`<p>
+    description: `<p>
 These documents ensure legal traceability, regulatory compliance, and confidence during inspections and audits.
 </p>`
   },
   {
-    id: 'machine-disposal',
-    title: 'USG Machine Disposal',
-    icon: Monitor,
-    description:
-      `<p>We undertake authorised collection, decontamination, and dismantling of end-of-life USG machines in accordance with applicable e-waste management rules.</p>
+    id: 'epr-compliance',
+    title: 'EPR Compliance & Documentation',
+    icon: FileCheck,
+    description: `<p>We provide end-to-end support for Extended Producer Responsibility (EPR) compliance, including authorized collection, recycling, documentation, and provision of EPR credits as per applicable guidelines.</p>
 <p>
-All components are processed through secure, compliant recycling channels to ensure environmental safety and regulatory compliance.</p>`,
+Our structured processes and transparent reporting help producers, importers, and brand owners meet statutory obligations and remain audit-ready at all times.
+</p>`
   },
   {
     id: 'annual-return',
     title: 'Annual Return Filing',
     icon: CalendarCheck,
-    description:`<p>We assist organizations in accurate and timely filing of annual returns as required under applicable environmental laws.</p>
+    description: `<p>We assist organizations in accurate and timely filing of annual returns as required under applicable environmental laws.</p>
 <p>Our expert support helps clients remain compliant, avoid penalties, and maintain a strong compliance record.</p>
 `
   },
@@ -139,7 +139,7 @@ function ServicesContent() {
           className="object-cover"
         />
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/45" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -208,7 +208,7 @@ function ServicesContent() {
       </section>
 
       <section id="clients" className='py-15 bg-muted/30'>
-              <ClientsCarousel />
+        <ClientsCarousel />
       </section>
 
       {/* CTA Section */}
@@ -227,7 +227,7 @@ function ServicesContent() {
               Contact our experts and create your zero-waste economy today
             </p>
             <section className="w-full py-12">
-            <EnquiryForm />
+              <EnquiryForm />
             </section>
           </motion.div>
         </div>

@@ -91,16 +91,16 @@ const impactAreas = [
 
 const visionPoints = [
   'Build environmentally responsible communities',
-  'Promote a circular economy',
+  'Promote Zero Waste Economy',
   'Turn waste into a resource for social good',
-  'Create a healthier and more sustainable future',
+  'Set up Healthcare Drives',
 ]
 
 export default function MakeAChangePage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-15 overflow-hidden bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5">
+      <section className="relative py-8 overflow-hidden bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5">
         {/* Decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -114,7 +114,7 @@ export default function MakeAChangePage() {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -123,8 +123,8 @@ export default function MakeAChangePage() {
             >
               <Recycle className="h-4 w-4" />
               MAKE A CHANGE
-            </motion.div>
-            <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+            </motion.div> */}
+            <h1 className="text-3xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               Turning Waste into
               <span className="text-primary block mt-2">Welfare</span>
             </h1>
@@ -132,10 +132,10 @@ export default function MakeAChangePage() {
               At Shiv Shakti Metals, we believe that sustainability is not just about recycling
               — it&apos;s about creating meaningful impact for society.
             </p>
-            <div className="flex justify-center gap-4 items-center mt-8">
-              <Image src="/ssk.png" alt="Shiv Shakti Metals" width={250} height={250} className='w-[100px] md:w-[250px]' />
+            <div className="flex justify-center gap-4 items-center mt-6">
+              <Image src="/ssk.png" alt="Shiv Shakti Metals" width={200} height={200} className='w-[100px] md:w-[200px]' />
               <Image src="/collab.png" alt="handshake" width={100} height={100} className='w-[50px] md:w-[100px]' />
-              <Image src="/sneh-charitable.png" alt="Sneh Charitable Trust" width={200} height={200} className='w-[100px] md:w-[200px]' />
+              <Image src="/sneh-charitable.png" alt="Sneh Charitable Trust" width={140} height={140} className='w-[100px] md:w-[160px] ml-2' />
             </div>
           </motion.div>
         </div>
@@ -303,14 +303,13 @@ export default function MakeAChangePage() {
                   <div className="inline-flex items-center justify-center h-14 w-14 rounded-2xl bg-primary/10 text-primary mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     <Recycle className="h-7 w-7" />
                   </div>
-                  <div className="text-sm font-bold text-primary mb-2">Option 1</div>
                   <h3 className="text-2xl font-bold text-foreground mb-4">
                     Donate Your Waste
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     Give your E-waste & hazardous waste to Shiv Shakti Metals for safe recycling and social impact.
                   </p>
-                  <Button asChild size="lg" className="w-full">
+                  <Button asChild size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                     <Link href="/#enquiry">
                       Donate Your E-Waste
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -328,7 +327,6 @@ export default function MakeAChangePage() {
                   <div className="inline-flex items-center justify-center h-14 w-14 rounded-2xl bg-primary/10 text-primary mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     <Heart className="h-7 w-7" />
                   </div>
-                  <div className="text-sm font-bold text-primary mb-2">Option 2</div>
                   <h3 className="text-2xl font-bold text-foreground mb-4">
                     Donate Directly
                   </h3>
@@ -336,7 +334,7 @@ export default function MakeAChangePage() {
                     You can also directly support social causes by donating through Sneh Charitable Trust.
                   </p>
                   <Button asChild size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                    <Link href="https://snehcharity.com/" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://snehcharity.com/donate-now/" target="_blank" rel="noopener noreferrer">
                       Support Sneh Charitable Trust
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </Link>

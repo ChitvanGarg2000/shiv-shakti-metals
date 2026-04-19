@@ -12,7 +12,7 @@ export function Footer() {
               <span className="font-bold text-lg">Shiv Shakti Metals</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Professional E-waste and Hazardous waste. Turn your scrap into value while supporting environmental
+              Authorized E-waste and Hazardous waste Recycler. Turn your scrap into value while supporting environmental
               sustainability.
             </p>
           </div>

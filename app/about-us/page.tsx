@@ -15,15 +15,14 @@ import { EnquiryForm } from "@/components/enquiry-form"
 const facilityImages = [
   { src: "/battery-waste.jpeg", alt: "Battery waste recycling" },
   { src: "/consumer2.jpeg", alt: "Consumer waste collection" },
+  { src: "/IMG_0619.jpg.jpeg", alt: "Facility image 0619" },
+  { src: "/medical-waste.jpeg", alt: "Medical waste recycling" },
   { src: "/cosumer1.jpeg", alt: "Consumer waste handling" },
   { src: "/ewaste-section.jpeg", alt: "E-waste section" },
-  { src: "/eWaste.png", alt: "E-waste graphic" },
-  { src: "/IMG_0619.jpg.jpeg", alt: "Facility image 0619" },
   { src: "/IMG_0630.jpg.jpeg", alt: "Facility image 0630" },
-  { src: "/IMG_0638.JPG.jpeg", alt: "Facility image 0638" },
-  { src: "/medical-waste.jpeg", alt: "Medical waste recycling" },
   { src: "/medical_equipment.jpeg", alt: "Medical equipment recycling" },
   { src: "/service_banner.jpeg", alt: "Service banner" },
+  { src: "/IMG_0638.JPG.jpeg", alt: "Facility image 0638" },
 ]
 
 export default function AboutPage() {
@@ -49,15 +48,15 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="w-full relative h-[450px] overflow-hidden">
+      <section className="w-full relative h-[450px] overflow-hidden md:min-h-screen">
 
         <Image
-          src="/about_us.jpeg"
+          src="/about-us.jpeg"
           alt="Shiv Shakti Metals about us banner"
           fill
           priority
           sizes="(max-width: 768px) 100vw, 1200px"
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-linear-to-r min-h-full flex flex-col justify-center items-center md:items-start from-black/80 via-black/50 to-transparent sm:ps-[100px]">
           <div className="mb-8 w-[90%] mx-auto sm:w-full flex flex-col items-center">
@@ -82,10 +81,10 @@ export default function AboutPage() {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Our Story</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                Shiv Shakti Metals is a professionally managed, government-authorized recycling company delivering end-to-end, fully compliant waste management solutions across India. With 15+ years of proven industry experience, we partner with corporates, banks, hospitals, PSUs, manufacturers, and bulk waste generators to ensure waste is recycled scientifically, securely, and responsibly—without legal risk or environmental compromise.
+              <p className="text-justify">
+                Shiv Shakti Metals is a professionally managed, government-authorized recycling company delivering end-to-end, fully compliant waste management solutions across India. With 17+ years of proven industry experience, we partner with corporates, banks, hospitals, hotels, PSUs, manufacturers, and bulk waste generators to ensure waste is recycled scientifically, securely, and responsibly—without legal risk or environmental compromise.
               </p>
-              <p>
+              <p className="text-justify">
                 Every material handled by us is processed through authorized, transparent, and environmentally sound recycling systems, ensuring complete traceability, ethical operations, and regulatory compliance. Our commitment to excellence and environmental responsibility sets us apart in the industry, allowing us to deliver superior outcomes for both clients and the environment.
               </p>
             </div>
@@ -136,7 +135,7 @@ export default function AboutPage() {
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-8 items-stretch">
               <Card className="w-full sm:w-1/2 h-auto overflow-hidden">
                 <CardContent className="p-0 h-full relative">
-                  <Image src="/vision.png" alt="Vision" fill className="object-fill"/>
+                  <Image src="/vision.jpeg" alt="Vision" fill className="object-cover"/>
                 </CardContent>
               </Card>
               <Card className="w-full sm:w-1/2 h-auto flex flex-col">
@@ -217,7 +216,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Integrity</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Transparent pricing, honest dealings, and ethical business practices guide our relationships.
+                  Transparent pricing, honest dealings, and ethical business practices guide our partnership.
                 </p>
               </motion.div>
             </motion.div>
