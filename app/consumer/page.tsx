@@ -66,11 +66,11 @@ export default function ConsumerPage() {
       <section className="relative py-28 lg:py-40 overflow-hidden md:min-h-screen">
         {/* Banner Image */}
         <Image
-          src="/sector-banner.jpeg"
+          src="/consumer_banner.jpeg"
           alt="Our Services Banner"
           fill
           priority
-          className="object-cover object-top"
+          className="w-full h-full object-fill object-center"
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60" />

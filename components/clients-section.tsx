@@ -137,7 +137,47 @@ const clientLogos: ClientLogo[] = [
     id: '25',
     name: 'Client 25',
     logo: '/yes-bank.jpeg',
-  }  
+  },
+  {
+    id: '26',
+    name: 'Ambience Mall',
+    logo: '/ambience-mall.jpeg',
+  },
+  {
+    id: '27',
+    name: 'Competent',
+    logo: '/competent.jpeg',
+  },
+  {
+    id: '28',
+    name: 'Crowne Plaza',
+    logo: '/crowneplaza.jpeg',
+  },
+  {
+    id: '29',
+    name: 'The Lalit',
+    logo: '/lalit.jpeg',
+  },
+  {
+    id: '30',
+    name: 'MAIDS',
+    logo: '/maids.jpeg',
+  },
+  {
+    id: '31',
+    name: 'Manipal',
+    logo: '/manipal.jpeg',
+  },
+  {
+    id: '32',
+    name: 'Max Healthcare',
+    logo: '/maxhealth.jpeg',
+  },
+  {
+    id: '34',
+    name: 'V3S Mall',
+    logo: '/v3s.jpeg',
+  },
 ]
 
 export function ClientsCarousel() {

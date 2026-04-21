@@ -13,16 +13,17 @@ import { CertificationsSection } from "@/components/certifications-section"
 import { EnquiryForm } from "@/components/enquiry-form"
 
 const facilityImages = [
-  { src: "/battery-waste.jpeg", alt: "Battery waste recycling" },
-  { src: "/consumer2.jpeg", alt: "Consumer waste collection" },
-  { src: "/IMG_0619.jpg.jpeg", alt: "Facility image 0619" },
-  { src: "/medical-waste.jpeg", alt: "Medical waste recycling" },
+  { src: "/about_us.jpeg", alt: "Battery waste recycling" },
   { src: "/cosumer1.jpeg", alt: "Consumer waste handling" },
+  { src: "/IMG_0619.jpg.jpeg", alt: "Facility image 0619" },
   { src: "/ewaste-section.jpeg", alt: "E-waste section" },
   { src: "/IMG_0630.jpg.jpeg", alt: "Facility image 0630" },
   { src: "/medical_equipment.jpeg", alt: "Medical equipment recycling" },
   { src: "/service_banner.jpeg", alt: "Service banner" },
+  { src: "/consumer2.jpeg", alt: "Consumer waste collection" },
   { src: "/IMG_0638.JPG.jpeg", alt: "Facility image 0638" },
+  { src: "/battery-waste.jpeg", alt: "Battery waste recycling" },
+  { src: "/medical-waste.jpeg", alt: "Medical waste recycling" },
 ]
 
 export default function AboutPage() {
@@ -56,7 +57,7 @@ export default function AboutPage() {
           fill
           priority
           sizes="(max-width: 768px) 100vw, 1200px"
-          className="object-cover object-center"
+          className="object-cover object-[center_-170px]"
         />
         <div className="absolute inset-0 bg-linear-to-r min-h-full flex flex-col justify-center items-center md:items-start from-black/80 via-black/50 to-transparent sm:ps-[100px]">
           <div className="mb-8 w-[90%] mx-auto sm:w-full flex flex-col items-center">

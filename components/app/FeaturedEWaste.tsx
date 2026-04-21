@@ -112,11 +112,16 @@ export function FeaturedEwasteSection() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true }}
-                            className="relative h-64 lg:h-80 rounded-lg overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20"
+                            className="relative h-64 lg:h-80 rounded-lg overflow-hidden bg-white"
                         >
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="text-center">
-                                    <Image src="/eWaste.png" alt="Featured E-Waste" width={500} height={500} className='w-full h-full object-cover'/>
+                            <div className="absolute inset-0 flex items-center justify-center p-4">
+                                <div className="relative w-full h-full">
+                                    <Image 
+                                        src="/sector-section.jpeg" 
+                                        alt="Featured E-Waste" 
+                                        fill
+                                        className='object-contain' 
+                                    />
                                 </div>
                             </div>
                         </motion.div>
@@ -154,7 +159,7 @@ export function FeaturedEwasteSection() {
                         <div>
                             <p className="text-primary font-semibold text-md mb-2">Ensuring Quality & Reliability</p>
                             <p className="text-muted-foreground text-sm">
-                                We ensure that every material meets industry standards and delivers durability, strength, and performance. This commitment helps industries build safer and more reliable infrastructure for the future. 
+                                We ensure that every material meets industry standards and delivers durability, strength, and performance. This commitment helps industries build safer and more reliable infrastructure for the future.
                             </p>
                         </div>
                         <div>

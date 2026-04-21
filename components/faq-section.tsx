@@ -3,31 +3,26 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { motion } from "framer-motion"
 
-const faqs = [
-  {
-    question: "What services does Shiv Shakti Metals provide?",
-    answer:
-      "We provide a wide range of recycling and disposal services including e-waste recycling, battery waste management, medical equipment disposal, secure data destruction, and corporate bulk waste pickup.",
-  },
+const faqs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "What is e-waste and why is it important to recycle it?",
     answer:
-      "E-waste includes discarded electronic devices such as computers, laptops, mobiles, servers, and batteries. Recycling prevents environmental pollution and helps recover valuable materials like metals and plastics.",
-  },
-  {
-    question: "Are you an authorized e-waste recycler?",
-    answer:
-      "Yes, we operate as an authorized waste recycling service provider ensuring compliance with government regulations and environmental standards.",
-  },
-  {
-    question: "Do you provide pickup services for e-waste?",
-    answer:
-      "Yes, we offer corporate and bulk waste pickup services, making it convenient for businesses and institutions to dispose of their waste responsibly.",
+      "E-waste refers to discarded electrical and electronic equipment that has reached the end of its useful life. Recycling prevents environmental pollution and helps recover valuable materials like metals and plastics.",
   },
   {
     question: "What types of e-waste do you accept?",
-    answer:
-      "We accept computers and laptops, mobile phones, servers and IT equipment, batteries, medical electronic equipment, and industrial electronic scrap.",
+    answer: (
+      <>
+        We accept:
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>All type of IT Equipments</li>
+          <li>All type of Large &amp; Small Electronic and Electrical Equipments</li>
+          <li>Electrical and Electronic Tools &amp; Machines</li>
+          <li>Electrical and Electronic Toys, Leisure, &amp; Sports Equipment</li>
+          <li>Electrical and Electronic Laboratory Equipments &amp; Instruments</li>
+        </ul>
+      </>
+    ),
   },
   {
     question: "How do you ensure secure data destruction?",
@@ -35,69 +30,96 @@ const faqs = [
       "We follow strict protocols for data destruction to ensure that all sensitive data from devices is permanently erased or destroyed before recycling.",
   },
   {
-    question: "Do you provide certificates after disposal?",
+    question: "What is Battery waste and why is it important to recycle it?",
     answer:
-      "Yes, we provide disposal certificates and documentation for compliance and audit purposes after proper recycling.",
+      "Battery waste consists of discarded batteries containing hazardous materials. If not recycled properly, it can cause serious environmental pollution and health risks. Recycling helps recover valuable materials, reduces pollution, and ensures safe and sustainable waste management.",
   },
   {
-    question: "What is EPR compliance and how do you help?",
+    question: "Do you recycle medical equipment waste?",
     answer:
-      "EPR (Extended Producer Responsibility) is a regulatory requirement for managing e-waste. We assist companies with documentation, compliance, and reporting for EPR obligations.",
+      "Yes, we specialize in safe disposal of medical machines like USG machines, MRI machines, X-ray machines and other medical equipment waste.",
   },
   {
-    question: "Can individuals also give e-waste for recycling?",
+    question: "Are you government authorized waste recycler?",
     answer:
-      "Yes, both individuals and businesses can provide e-waste to us. However, bulk and corporate waste are our primary focus.",
+      "Yes, we operate as government authorized waste recycling service provider ensuring compliance with government regulations and environmental standards.",
   },
   {
-    question: "What happens to the e-waste after collection?",
+    question: "What services do Shiv Shakti Metals provide?",
     answer:
-      "The waste undergoes segregation, dismantling, material recovery, and recycling or safe disposal. This ensures minimal environmental impact.",
+      "We provide a wide range of recycling and disposal services including waste recycling, scheduled Pick-up, safe transportation, medical equipment disposal, secure data destruction, and corporate bulk waste pickup.",
   },
   {
-    question: "Do you handle battery recycling?",
+    question: "Do you provide compliances after disposal?",
     answer:
-      "Yes, we manage battery waste and provide proper manifest documentation for safe handling and recycling.",
+      "Yes, we provide e-waste & hazardous waste manifest, disposal certificates and documentation for compliance and audit purposes after proper recycling.",
   },
   {
-    question: "Do you recycle medical machines?",
-    answer:
-      "Yes, we specialize in safe disposal of medical machines like USG and other electronic healthcare equipment.",
-  },
-  {
-    question: "Is your recycling process environmentally safe?",
-    answer:
-      "Yes, we follow environmentally responsible processes to reduce pollution and maximize resource recovery.",
-  },
-  {
-    question: "How can businesses partner with you?",
-    answer:
-      "Businesses can contact us for bulk waste pickup, annual recycling contracts, compliance support, and waste management consultation.",
+    question: "What happens to the waste after collection?",
+    answer: (
+      <>
+        The waste undergoes:
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>Segregation</li>
+          <li>Dismantling</li>
+          <li>Material recovery</li>
+          <li>Recycling or safe disposal</li>
+        </ul>
+        <p className="mt-2">This ensures minimal environmental impact.</p>
+      </>
+    ),
   },
   {
     question: "Do you provide annual return filing support?",
     answer:
-      "Yes, we assist companies in filing annual returns related to e-waste compliance.",
+      "Yes, we assist corporates in filing annual returns related to e-waste & battery waste compliance.",
   },
   {
     question: "What industries do you serve?",
-    answer:
-      "We serve corporates and IT companies, hospitals and healthcare facilities, educational institutions, and manufacturing units.",
+    answer: (
+      <>
+        We serve:
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>Corporates &amp; IT companies</li>
+          <li>Hospitals &amp; healthcare facilities</li>
+          <li>Educational institutions</li>
+          <li>Manufacturing units</li>
+          <li>Government Sectors</li>
+        </ul>
+      </>
+    ),
   },
   {
     question: "How do you determine the value of scrap?",
-    answer:
-      "The value depends on the type of material (metal, battery, electronic parts), quantity, and prevailing market rates.",
+    answer: (
+      <>
+        The value depends on:
+        <ul className="list-disc pl-6 mt-2 space-y-1">
+          <li>Type of material (metal, battery, electronic parts)</li>
+          <li>Quantity</li>
+          <li>Market rates</li>
+        </ul>
+      </>
+    ),
   },
   {
     question: "Why should we choose Shiv Shakti Metals?",
-    answer:
-      "Because we are an authorized recycler with end-to-end waste management, secure data handling, compliance support, and environment-friendly practices.",
+    answer: (
+      <ul className="list-disc pl-6 space-y-1">
+        <li>Authorized recycler</li>
+        <li>Scheduled Pick-up</li>
+        <li>Safe Transportation</li>
+        <li>End-to-end waste management</li>
+        <li>Secure data handling</li>
+        <li>Compliance support</li>
+        <li>Environment-friendly practices</li>
+      </ul>
+    ),
   },
   {
     question: "Where is your company located?",
     answer:
-      "Our facility is located in Modinagar, Uttar Pradesh, serving clients across regions.",
+      "Our facility is located in Khasra No. 545, Sikheda Road, Industrial Area, Modinagar, Ghaziabad, 201204, Uttar Pradesh serving clients across regions.",
   },
   {
     question: "How can we contact you?",
