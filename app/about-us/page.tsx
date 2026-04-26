@@ -49,7 +49,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="w-full relative h-[450px] overflow-hidden md:min-h-screen">
+      <section className="w-full relative h-[450px] overflow-hidden md:min-h-[calc(100vh-80px)]">
 
         <Image
           src="/about-us.jpeg"
@@ -57,7 +57,7 @@ export default function AboutPage() {
           fill
           priority
           sizes="(max-width: 768px) 100vw, 1200px"
-          className="object-cover object-[center_-170px]"
+          className="object-cover object-[center_-200px]"
         />
         <div className="absolute inset-0 bg-linear-to-r min-h-full flex flex-col justify-center items-center md:items-start from-black/80 via-black/50 to-transparent sm:ps-[100px]">
           <div className="mb-8 w-[90%] mx-auto sm:w-full flex flex-col items-center">
@@ -128,7 +128,7 @@ export default function AboutPage() {
               </Card>
               <Card className="w-full sm:w-1/2 h-auto overflow-hidden">
                 <CardContent className="p-0 h-full relative">
-                  <Image src="/mission.png" alt="Mission" fill className="object-fill"/>
+                  <Image src="/mission.jpeg" alt="Mission" fill className="object-fill"/>
                 </CardContent>
               </Card>
             </motion.div>

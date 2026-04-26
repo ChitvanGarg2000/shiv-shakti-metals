@@ -86,7 +86,7 @@ export default function EnterprisessectorsPage() {
       <section className="relative py-28 lg:py-40 overflow-hidden md:min-h-screen">
         {/* Banner Image */}
         <Image
-          src="/sector-banner.jpeg"
+          src="/sector-banner2.png"
           alt="Our Services Banner"
           fill
           priority
@@ -100,7 +100,7 @@ export default function EnterprisessectorsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto pt-[70px]"
           >
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Begin your

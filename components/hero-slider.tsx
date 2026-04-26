@@ -10,7 +10,7 @@ import dynamic from "next/dynamic"
 export function HeroSlider() {
 
   return (
-    <section className="w-full relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
+    <section className="w-full relative h-125 md:h-[calc(100vh-80px)] overflow-hidden">
         {/* <video
           autoPlay
           loop

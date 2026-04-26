@@ -129,7 +129,7 @@ function ServicesContent() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-28 lg:py-40 overflow-hidden">
+      <section className="h-screen relative py-28 lg:py-40 overflow-hidden">
         {/* Banner Image */}
         <Image
           src="/service_banner.jpeg"
