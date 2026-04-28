@@ -13,15 +13,14 @@ import { CertificationsSection } from "@/components/certifications-section"
 import { EnquiryForm } from "@/components/enquiry-form"
 
 const facilityImages = [
-  { src: "/about_us.jpeg", alt: "Battery waste recycling" },
-  { src: "/cosumer1.jpeg", alt: "Consumer waste handling" },
-  { src: "/IMG_0619.jpg.jpeg", alt: "Facility image 0619" },
-  { src: "/ewaste-section.jpeg", alt: "E-waste section" },
-  { src: "/IMG_0630.jpg.jpeg", alt: "Facility image 0630" },
-  { src: "/medical_equipment.jpeg", alt: "Medical equipment recycling" },
-  { src: "/service_banner.jpeg", alt: "Service banner" },
-  { src: "/consumer2.jpeg", alt: "Consumer waste collection" },
-  { src: "/IMG_0638.JPG.jpeg", alt: "Facility image 0638" },
+  { src: "/gallery1.jpeg", alt: "Battery waste recycling" },
+  { src: "/gallery2.jpeg", alt: "Consumer waste handling" },
+  { src: "/gallery3.jpeg", alt: "Facility image 0619" },
+  { src: "/gallery4.jpeg", alt: "E-waste section" },
+  { src: "/gallery5.jpeg", alt: "Facility image 0630" },
+  { src: "/gallery6.jpeg", alt: "Medical equipment recycling" },
+  { src: "/gallery7.jpeg", alt: "Service banner" },
+  { src: "/gallery8.jpeg", alt: "Consumer waste collection" },
   { src: "/battery-waste.jpeg", alt: "Battery waste recycling" },
   { src: "/medical-waste.jpeg", alt: "Medical waste recycling" },
 ]
@@ -397,7 +396,7 @@ export default function AboutPage() {
               size="lg"
               variant="secondary"
             >
-              <Link href="#enquiry">Contact Our Experts</Link>
+              <Link href="/contact-us">Contact Our Experts</Link>
             </Button>
           </motion.div>
         </div>

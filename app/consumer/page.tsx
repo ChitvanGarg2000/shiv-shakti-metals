@@ -59,6 +59,50 @@ const itemVariants = {
   },
 }
 
+const processCards = [
+  {
+    title: 'What We Offer',
+    points: [
+      'Compliance Management',
+      'Doorstep Waste Pick-up',
+      'Secure Data Destruction',
+      'Annual Return Filing Support',
+      'Sustainable Recycling Practices',
+    ],
+  },
+  {
+    title: 'Why Bulk Consumer Choose Shiv Shakti Metals?',
+    points: [
+      'Authorized & compliant recycler',
+      'Transparent processes & proper documentation',
+      'Quick response & efficient logistics',
+      'Environment-friendly practices',
+      'Trusted by multiple industries',
+    ],
+  },
+  {
+    title: 'Who Can Benefit?',
+    points: [
+      'Corporates & Offices',
+      'IT Companies',
+      'Hotels & Hospitality',
+      'Hospitals',
+      'Colleges & Universities',
+      'Government Organizations',
+      'Manufacturing Units',
+    ],
+  },
+  {
+    title: 'Why Choose Us for Medical Equipment Disposal?',
+    points: [
+      'Expertise in handling sensitive healthcare equipment',
+      'Compliance with government and pollution control norms',
+      'Data security for digital medical devices',
+      'Eco-friendly recycling practices',
+    ],
+  },
+]
+
 export default function ConsumerPage() {
   return (
     <main className="min-h-screen bg-background">
@@ -133,6 +177,75 @@ export default function ConsumerPage() {
               />
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Our Process Section */}
+      <section className="py-12 lg:py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={containerVariants}
+            className="space-y-10"
+          >
+            <motion.div variants={itemVariants} className="text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Our Process</h2>
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              className="relative overflow-hidden rounded-3xl min-h-[260px] lg:min-h-[380px] shadow-lg"
+            >
+              <Image
+                src="/our_process.jpeg"
+                alt="Our process"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+
+            <motion.div
+              variants={containerVariants}
+              className="grid gap-6 lg:grid-cols-2"
+            >
+              {processCards.map((card) => (
+                <motion.div key={card.title} variants={itemVariants}>
+                  <Card className="h-full border-border/60 bg-card/80 backdrop-blur-sm p-6 shadow-sm">
+                    <h3 className="text-xl font-semibold text-foreground">{card.title}</h3>
+                    <ul className="mt-4 space-y-3 text-muted-foreground">
+                      {card.points.map((point) => (
+                        <li key={point} className="flex items-start gap-3">
+                          <span className="mt-2 h-2 w-2 rounded-full bg-primary shrink-0" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </Card>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <Card className="border-primary/20 bg-primary/5 p-6 lg:p-8">
+                <h3 className="text-2xl font-semibold text-foreground">Make a Responsible Choice</h3>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Proper waste management is not just about disposal — it is about responsibility
+                  towards the environment and future generations.
+                </p>
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Partner with Shiv Shakti Metals and take a step towards sustainable waste
+                  management.
+                </p>
+                <div className="mt-6">
+                  <Button asChild size="lg">
+                    <Link href="/contact-us">Schedule your pickup today</Link>
+                  </Button>
+                </div>
+              </Card>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
