@@ -117,7 +117,7 @@ export function FeaturedEwasteSection() {
                             <div className="absolute inset-0 flex items-center justify-center p-4">
                                 <div className="relative w-full h-full">
                                     <Image 
-                                        src="/sector-section-img.jpeg" 
+                                        src="/sector-section.png" 
                                         alt="Featured E-Waste" 
                                         fill
                                         className='object-contain' 
