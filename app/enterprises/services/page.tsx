@@ -146,7 +146,7 @@ function ServicesContent() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto -translate-y-6 lg:-translate-y-10"
           >
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               We are your
