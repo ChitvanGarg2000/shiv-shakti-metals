@@ -136,7 +136,7 @@ function ServicesContent() {
           alt="Our Services Banner"
           fill
           priority
-          className="object-cover"
+          className="object-cover md:object-[center_-155px]"
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/45" />
