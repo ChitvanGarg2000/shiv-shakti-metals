@@ -100,9 +100,9 @@ export function Header() {
               FAQs
             </Link> */}
 
-            <Button asChild>
+            {/* <Button asChild>
               <Link href="/make-a-change">Make a Change</Link>
-            </Button>
+            </Button> */}
           </div>
 
           {/* Right Side Buttons */}
@@ -182,11 +182,11 @@ export function Header() {
                 Contact Us
               </Link>
 
-              <Button asChild className="w-full mt-2">
+              {/* <Button asChild className="w-full mt-2">
                 <Link href="/make-a-change" onClick={() => setMobileMenuOpen(false)}>
                   Make a Change
                 </Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
         )}
